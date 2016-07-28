@@ -1,0 +1,752 @@
+/* General Classes */
+* {
+	box-sizing: border-box;
+	font-family: "Roboto Condensed";
+}
+
+body {
+	background-color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+/* Clearfix */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block; 
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+/* Navigation bar */
+div.viewer {
+	margin-top: 36px;
+}
+
+div.navbar {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #FFF;
+	box-shadow: 2px 1px 1px rgba(0,0,0,0.5);
+	margin-top: -15px;
+	top: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+	z-index: 10000;
+}
+
+div.navbar-container {
+	width: 1300px;
+	margin: 0px auto;
+	display: block;
+}
+
+img.nav-bar-logo {
+	height: 40px;
+	width: auto;
+	float: left;
+	margin-bottom: -15px; 
+	margin-left: -80px;
+	padding-top: 5px;
+}
+
+li {
+	float: right;
+	list-style: none;
+}
+
+.nav-button {
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 8px 10px;
+	text-decoration: none;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 100%;
+	font-weight: 750;
+}
+
+.nav-button:hover {
+	background-color: #f2f2f2;
+}
+
+.nav-button:active {
+	background-color: #FBB03B;
+}
+
+/* Parallax */
+.parallax-container {
+	position: relative;
+	overflow: visible;
+	width: 100%;
+	height: 850px;
+	display: block;
+}
+
+.parallax-layer {
+	width: 100%;
+	height: 500px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-position: bottom center;
+	background-repeat: repeat-x;
+	background-size: 960px 253px;
+}
+
+.layer-0 {
+	top: 0;
+	z-index: 5;
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Parallax%20001_zpsyayazaqs.png");
+	background-size: 100% auto;
+}
+
+.layer-1 {
+	z-index: 15;
+	background-image: url("http://i346.photobucket.com/albums/p438/adimitui/Parallax%20002_zpsfudkypay.png");
+	background-size: 100% 700px;
+	margin-top: 250px;
+}
+
+.layer-2 {
+	top: 65px;
+	z-index: 20;
+	background-image: url("http://i346.photobucket.com/albums/p438/adimitui/Parallax%20003_zpsji0syxp6.png");
+	background-size: 100% 800px;
+	margin-top: 230px;
+}
+
+.layer-3 {
+	z-index: 25;
+	text-align: center;
+}
+
+.layer-3 img {
+	width: 600px;
+	height: auto;
+}
+
+.layer-4 {
+	top: 20px;
+	z-index: 30;
+	background-image: url("http://i346.photobucket.com/albums/p438/adimitui/Parallax%20004%20Lengthened_zpsf7obuhna.png");
+	background-repeat: no-repeat;
+	background-size: 100% 700px;
+	margin-top: 250px;
+}
+
+.layer-5 {
+	z-index: 35;
+	background-color: #000;
+	width: 100%;
+	margin-top: 750px;
+}
+
+div.placeholder {
+	width: 100%;
+	height: 200px;
+}
+
+/* Quote Section */
+div.quote-section {
+	text-align: center;
+	width: 100%;
+	padding-top: 250px;
+	padding-bottom: 250px;
+	display: block;
+}
+
+div.quote-section.first {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+div.quotation-mark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0.1;
+	text-align: left;
+}
+
+div.quote-section-width {
+	position: relative;
+	width: 700px;
+	margin: 0px auto;
+}
+
+div.quote-section img {
+	width: 80px;
+	height: auto;
+	display: inline;
+	position: relative;
+}
+
+div.quote-section img.left-quotation-mark {
+	transform: translate(-40px, -30px);
+}
+
+div.quote-section img.right-quotation-mark {
+	transform: translate(560px, 40px);
+}
+
+div.quote-section h2 {
+	color: #FFF;
+	font-size: 40px;
+	text-align: center;
+	display: inline;
+	text-align: center;
+	opacity: 0.8;
+}
+
+div.quote-section h3 {
+	color: #FFF;
+	opacity: 0.3;
+	font-size: 30px;
+	position: relative;
+	transform: translate(0, -15px);
+}
+
+/* Panorama Page */
+div.panorama-section {
+	width: 100%;
+	margin-bottom: 100px;
+	padding-top: 20px;
+}
+
+h1 {
+	font-family: "Roboto Condensed";
+	color: #FFF;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 80px;
+	opacity: 0.2;
+}
+
+div.panorama-section h1 span {
+	color: #FBB03B;
+}
+
+div.panorama-box {
+	height: 140px;
+	position: relative;
+	border-bottom: 3px solid #FFF;
+}
+
+div.panorama-box:nth-child(2) {
+	border-top: 3px solid #FFF;
+}
+
+div.panorama-lightbox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(51,51,51,0.5);
+	display: fixed;
+}
+
+div.panorama-lightbox:hover {
+	background-color: rgba(51,51,51,0.2);
+}
+
+.panorama-lightbox.hide-lightbox {
+	display: none;
+}
+
+div.panorama-box h2 {
+	font-family: "Roboto Condensed";
+	color: #FFF;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 50px;
+	text-shadow: 2px 1px 1px rgba(0,0,0,0.5);
+}
+
+div.panorama-box:last-child {
+	margin-bottom: 100px;
+}
+
+/* Our (Virtual) Reality */
+div.our-virtual-reality-section {
+	padding-top: 20px;
+	padding-bottom: 100px;
+}
+
+div.container {
+	width: 75vw;
+	margin: 0px auto;
+	display: block;
+}
+
+div.text-tile {
+	width: 45vw;
+	height: 15vw;
+	float: left;
+	padding-right: 15px;
+}
+
+div.text-tile p {
+	color: #FFF;
+	font-size: 19px;
+	position: relative;
+	transform: translateY(-10px);
+}
+
+div.photo-tile {
+	float: left;
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	text-align: center;
+}
+
+div.photo-tile:hover {
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+	filter: grayscale(0%);
+	transition: all 0.3s ease;
+}
+
+div.photo-tile.goggle {
+	background-color: #FFBF00;
+	width: 15vw;
+	height: 15vw;
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+	filter: grayscale(0%);
+}
+
+div.photo-tile.goggle img {
+	width: 100px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+div.photo-tile.first {
+	width: 15vw;
+	height: 15vw;
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20006_zpsi7fsigpw.jpg") center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+div.photo-tile.second {
+	width: 15vw;
+	height: 15vw;
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20001_zpsqtmnkavn.jpg") center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+div.photo-tile.building {
+	width: 15vw;
+	height: 15vw;
+	background-color: #FFBF00;
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+	filter: grayscale(0%);
+	text-align: center;
+}
+
+div.photo-tile.building img {
+	width: 80px;
+	height: auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+div.photo-tile.third {
+	width: 15vw;
+	height: 15vw;
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20002_zps152vtxp9.jpg") center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+div.photo-tile.fourth {
+	width: 15vw;
+	height: 15vw;
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20003_zpshp2qo4mj.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: -50px 0px;
+}
+
+div.photo-tile.fifth {
+	width: 15vw;
+	height: 15vw;
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20004_zpscc8jhkkp.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: -50px 0px;
+}
+
+div.photo-tile.screen {
+	width: 15vw;
+	height: 15vw;
+	background-color: #FFBF00;
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+	filter: grayscale(0%);
+	text-align: center;
+}
+
+div.photo-tile.screen img {
+	width: 80px;
+	height: auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+div.photo-tile.sixth {
+	width: 15vw;
+	height: 15vw;
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20005_zpshxhpnm35.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+div.photo-tile.seventh {
+	width: 15vw;
+	height: 15vw;
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20007_zpsaclgjqag.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: -70px 0px;
+}
+
+div.photo-tile.eighth {
+	width: 15vw;
+	height: 15vw;
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20008_zpsmoprlt1q.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: -40px 0px;
+}
+
+div.photo-tile.design {
+	width: 15vw;
+	height: 15vw;
+	background-color: #FFBF00;
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+	filter: grayscale(0%);
+	text-align: center;
+}
+
+div.photo-tile.design img {
+	width: 80px;
+	height: auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+div.photo-tile.ninth {
+	width: 15vw;
+	height: 15vw;
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20009_zpstqf1cyen.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: -30px 0px;
+}
+
+div.photo-tile.tenth {
+	width: 15vw;
+	height: 15vw;
+	background: url("http://www.saota.com/wp-content/uploads/2015/05/SAOTA_SN_S2_1.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: -30px 0px;
+}
+
+div.photo-tile.eleventh {
+	width: 15vw;
+	height: 15vw;
+	background: url("http://www.saota.com/wp-content/uploads/2015/05/SAOTA_SN_Saturne_1.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: -20px 0px;
+}
+
+div.quote-tile {
+	width: 45vw;
+	height: 15vw;
+	float: left;
+	padding-left: 25px;
+}
+
+/* Second Quote Section */
+div.full-length-container {
+	width: 100%;
+	display: block;
+}
+
+div.quote-section img.left-quotation-mark-2 {
+	transform: translate(-40px, -30px);
+}
+
+div.quote-section img.right-quotation-mark-2 {
+	transform: translate(560px, 70px);
+}
+
+/* Project Previews */
+div.background-lightbox {
+	background-color: rgba(0,0,0,0.9);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+	display: none;
+	text-align: center;
+	z-index: 1000;
+}
+
+div.background-lightbox.show-lightbox {
+	display: block;
+}
+
+div.background-lightbox img {
+	max-height: calc(100vh - 150px);
+	width: auto;
+	position: relative;
+	top: 50%;
+	margin-top: 50px;
+	box-shadow: 2px 1px 1px rgba(0,0,0,0.5);
+}
+
+div.background-lightbox h3 {
+	color: #FFF;
+	text-shadow: 2px 1px 1px rgba(0,0,0,0.5);
+}
+
+div.background-lightbox a {
+	color: #FFF;
+}
+
+div.background-lightbox a:hover {
+	color: #429DE8;
+}
+
+div.background-lightbox p {
+	margin-top: -15px;
+}
+
+/* Contact Page */
+div.contact-section {
+	width: 100%;
+	padding-top: 20px;
+}
+
+header.contactheader{
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-bottom: 5px;
+	background-color:#333; 
+}
+
+div.contact-us {
+	color: #727272;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 80px;
+}
+
+div.contact-page {
+	width: 100%;
+	margin-bottom: 100px;
+	height: 400px;
+}
+
+div.contact-info {
+	background-color: #333;
+	float: left;
+	font-family: 'Roboto Condensed', sans-serif;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-bottom: 25px;
+	padding-right: 75px;
+	height: 100%;
+	width: 30%;
+}
+
+div.contact-info h2 {
+	margin-bottom: -20px;
+}
+
+.contact-info-text {
+	color: #FFF;
+}
+
+.emailref:link {
+	color: #FBB03B;
+}
+
+.socialmediaicons {
+	height: 30px;
+	width: 30px;
+}
+
+.embed-map-display {
+	padding-top: .5px;
+}
+
+div.contact-map {
+	width: 70%;
+	float: left;
+	height: 100%;
+	position: relative;
+	transform: translate(0,-19px);
+}
+
+.app-page-header {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.app-page {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+div.contact-section div.contact-page a {
+	text-decoration: none;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+div.contact-section div.contact-page a:hover img {
+	transform: scale(1.2,1.2);
+}
+
+div.contact-section div.contact-page a:active img {
+	transform: scale(1,1);
+}
+
+/* Download Application */
+div.download-section {
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	background-color: #333;
+	text-align: center;
+}
+
+div.download-section img {
+	width: 350px;
+	height: auto;
+	display: block;
+	margin: 0px auto;
+}
+
+div.download-section h1 {
+	font-size: 50px;
+	opacity: 1.0;
+	display: block;
+	margin: 0px auto;
+	transform: translate(0, -50px);
+	margin-bottom: -50px;
+}
+
+div.phones {
+	width: 100%;
+	margin: 0px auto;
+}
+
+div.phones img {
+	width: 400px;
+}
+
+div.badges {
+	width: 100%;
+	margin: 0px auto;
+}
+
+div.badges a {
+	text-decoration: none;
+}
+
+div.badges img {
+	display: inline-block;
+	width: 165px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+div.app-summary {
+	font-family: 'Roboto Condensed', sans-serif;
+	width: 700px;
+	font-size: 30px;
+	margin: 0px auto;
+	display: block;
+}
+
+div.app-summary p {
+	color: #FFF;
+	font-size: 20px;
+	text-align: center;
+}
+
+/* Map */
+#map {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+}
