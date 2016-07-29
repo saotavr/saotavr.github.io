@@ -280,6 +280,7 @@ div.panorama-lightbox {
 
 div.panorama-lightbox:hover {
 	background-color: rgba(51,51,51,0.2);
+	cursor: pointer;
 }
 
 .panorama-lightbox.hide-lightbox {
@@ -340,6 +341,7 @@ div.photo-tile:hover {
 	-o-filter: grayscale(0%);
 	filter: grayscale(0%);
 	transition: all 0.3s ease;
+	cursor: pointer;
 }
 
 div.photo-tile.goggle {
@@ -767,7 +769,7 @@ div.badges img {
 }
 
 div.badges img:hover {
-	transform: scale(1.05,1.05);
+	transform: scale(1.075,1.075);
 	transition: all 0.3s ease;
 }
 
@@ -778,6 +780,7 @@ div.badges img:active {
 div.badges div.gear-vr {
 	width: 165px;
 	display: inline-block;
+	cursor: pointer;
 }
 
 div.app-summary {
@@ -801,6 +804,8 @@ div.instruction-box {
 	box-shadow: 2px 1px 1px rgba(0,0,0,0.5);
 	margin-top: 50px;
 	position: relative;
+	max-height: calc(100vh - 60px);
+	overflow-y: auto;
 }
 
 div.instruction-box-header {
@@ -847,6 +852,7 @@ div.instruction-box-header img:active {
 div.instruction-box-body {
 	background-color: #FFF;
 	width: 100%;
+	padding-bottom: 20px;
 }
 
 div.instruction-box-body div.body-image {
@@ -891,7 +897,7 @@ div.instruction-download img {
 	height: auto;
 }
 
-div.instruction-download h3 {
+div.instruction-box-body h3 {
 	color: #FFF;
 	text-align: center;
 	margin-bottom: 2px;
@@ -907,5 +913,36 @@ div.instruction-download:hover {
 }
 
 div.instruction-download:active {
+	transform: scale(1,1);
+}
+
+div.body-text img.instruction-photo {
+	width: 100%;
+	border: 1px solid #F1F1F1;
+}
+
+div.body-text img.oculus-photo {
+	width: 50%;
+	text-align: center;
+}
+
+div.body-text button {
+	display: block;
+	border: none;
+	background-color: #FBB03B;
+	width: 250px;
+	margin: 0px auto;
+	margin-top: 20px;
+	text-transform: uppercase;
+	padding-bottom: 15px;
+}
+
+div.body-text button:hover {
+	transform: scale(1.05,1.05);
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+div.body-text button:active {
 	transform: scale(1,1);
 }
