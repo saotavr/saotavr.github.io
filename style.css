@@ -191,6 +191,14 @@ div.quote-section.first {
 	background-size: cover;
 }
 
+div.quote-section.second {
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Quote%20Background%20002_zpsc4esn9ry.png");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 div.quotation-mark {
 	position: absolute;
 	top: 0;
@@ -305,12 +313,18 @@ div.panorama-box:last-child {
 div.our-virtual-reality-section {
 	padding-top: 20px;
 	padding-bottom: 100px;
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Background%20003%20Edited_zpsuvhy6vzs.png");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 div.container {
 	width: 75vw;
 	margin: 0px auto;
 	display: block;
+	z-index: 1000;
 }
 
 div.text-tile {
@@ -629,6 +643,11 @@ div.background-lightbox p {
 div.contact-section {
 	width: 100%;
 	padding-top: 20px;
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Background%20005_zpsyvgbzeiz.png");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 header.contactheader{
@@ -725,10 +744,26 @@ div.contact-section div.contact-page a:active img {
 /* Download Application */
 div.download-section {
 	width: 100%;
-	padding-top: 20px;
 	padding-bottom: 50px;
-	background-color: #333;
+	background-color: #000;
 	text-align: center;
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Background%20004%20Edited_zpsbakzkrno.png");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+div.download-box {
+	width: 60%;
+	position: relative;
+	margin: 0px auto;
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/White%20Overlay%2010_zps1gfilhgh.png");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-bottom: 20px;
 }
 
 div.download-section img {
@@ -745,6 +780,7 @@ div.download-section h1 {
 	margin: 0px auto;
 	transform: translate(0, -50px);
 	margin-bottom: -50px;
+	text-shadow: 2px 1px 1px rgba(0,0,0,0.5);
 }
 
 div.phones {
