@@ -184,6 +184,7 @@ div.quote-section {
 }
 
 div.quote-section.first {
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Quote%20Background%20001%20Edited_zpsuscymzjh.png");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
