@@ -144,6 +144,16 @@ app.controller("MainCtrl", function($scope) {
 		lightbox.classList.remove("show-lightbox");
 	}
 
+	$scope.showInstructions = function() {
+		var lightbox = document.querySelectorAll("#background-lightbox-gear-vr")[0];
+		lightbox.classList.add("show-lightbox");
+	}
+
+	$scope.removeInstructions = function() {
+		var lightbox = document.querySelectorAll("#background-lightbox-gear-vr")[0];
+		lightbox.classList.remove("show-lightbox");
+	}
+
 	var scrollDown = function() {
 		var firstQuoteLocation = 372;
 		var panoramaLocation = 887;

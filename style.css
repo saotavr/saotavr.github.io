@@ -10,6 +10,14 @@ body {
 	padding: 0;
 }
 
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
 /* Clearfix */
 .clearfix:after {
 	visibility: hidden;
@@ -52,7 +60,7 @@ div.navbar {
 }
 
 div.navbar-container {
-	width: 1300px;
+	width: 95%;
 	margin: 0px auto;
 	display: block;
 }
@@ -569,7 +577,7 @@ div.quote-section img.right-quotation-mark-2 {
 }
 
 /* Project Previews */
-div.background-lightbox {
+div.background-lightbox, div.background-lightbox-gear-vr {
 	background-color: rgba(0,0,0,0.9);
 	top: 0;
 	left: 0;
@@ -581,7 +589,7 @@ div.background-lightbox {
 	z-index: 1000;
 }
 
-div.background-lightbox.show-lightbox {
+div.background-lightbox.show-lightbox, div.background-lightbox-gear-vr.show-lightbox {
 	display: block;
 }
 
@@ -701,6 +709,13 @@ div.contact-section div.contact-page a:active img {
 	transform: scale(1,1);
 }
 
+#map {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+}
+
 /* Download Application */
 div.download-section {
 	width: 100%;
@@ -751,6 +766,20 @@ div.badges img {
 	margin-right: 5px;
 }
 
+div.badges img:hover {
+	transform: scale(1.05,1.05);
+	transition: all 0.3s ease;
+}
+
+div.badges img:active {
+	transform: scale(1,1);
+}
+
+div.badges div.gear-vr {
+	width: 165px;
+	display: inline-block;
+}
+
 div.app-summary {
 	font-family: 'Roboto Condensed', sans-serif;
 	width: 700px;
@@ -765,10 +794,118 @@ div.app-summary p {
 	text-align: center;
 }
 
-/* Map */
-#map {
+/* Instruction Box (Gear VR) */
+div.instruction-box {
+	width: 60%;
+	margin: 0px auto;
+	box-shadow: 2px 1px 1px rgba(0,0,0,0.5);
+	margin-top: 50px;
+	position: relative;
+}
+
+div.instruction-box-header {
+	background-color: #FBB03B;
+	width: 100%;
 	position: absolute;
 	top: 0;
-	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+div.instruction-box-header-divide {
+	width: 50%;
+	float: left;
+}
+
+div.instruction-box-header h3 {
+	color: #FFF;
+	text-transform: uppercase;
+	margin-left: 15px;
+}
+
+div.instruction-box-header div.header-image {
+	width: 60px;
+	float: right;
+	text-align: center;
+	top: 50%;
+	position: relative;
+	transform: translateY(50%);
+}
+
+div.instruction-box-header img {
+	width: 30px;
+}
+
+div.instruction-box-header img:hover {
+	transform: scale(1.2,1.2);
+}
+
+div.instruction-box-header img:active {
+	transform: scale(1,1);
+}
+
+div.instruction-box-body {
+	background-color: #FFF;
 	width: 100%;
+}
+
+div.instruction-box-body div.body-image {
+	width: 100%;
+	text-align: center;
+}
+
+div.body-image img {
+	width: 200px;
+	padding-top: 70px;
+}
+
+div.body-text {
+	width: 100%;
+	text-align: center;
+	color: #0B1013;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+div.body-text p {
+	font-size: 18px;
+}
+
+div.body-text p span {
+	text-transform: uppercase;
+}
+
+div.instruction-download {
+	width: 300px;
+	background-color: #FBB03B;
+	display: inline-block;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	margin-left: 7px;
+	margin-right: 7px;
+	border-radius: 20px;
+}
+
+div.instruction-download img {
+	width: 50px;
+	height: auto;
+}
+
+div.instruction-download h3 {
+	color: #FFF;
+	text-align: center;
+	margin-bottom: 2px;
+}
+
+div.instruction-box a {
+	text-decoration: none;
+}
+
+div.instruction-download:hover {
+	transform: scale(1.05,1.05);
+	transition: all 0.3s ease;
+}
+
+div.instruction-download:active {
+	transform: scale(1,1);
 }

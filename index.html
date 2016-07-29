@@ -44,6 +44,43 @@
 		</a>
 	</div>
 
+	<div id="background-lightbox-gear-vr" class="background-lightbox-gear-vr">
+		<div class="instruction-box">
+			<div class="instruction-box-header clearfix">
+				<div class="instruction-box-header-divide left">
+					<h3>Gear VR Instructions</h3>
+				</div>
+				<div class="instruction-box-header-divide right">
+					<div class="header-image">
+						<img ng-click="removeInstructions()" src="http://i346.photobucket.com/albums/p438/adimitui/Cancel%20Icon%20White_zps3lbjfcbt.png"/>
+					</div>
+				</div>
+			</div>
+
+			<div class="instruction-box-body">
+				<div class="body-image">
+					<img src="http://i346.photobucket.com/albums/p438/adimitui/SAOTA%20VR%20Transparent_zpsmbfxtihf.png"/>
+				</div>
+				<div class="body-text">
+					<p><span><strong>Instructions for Samsung Gear VR:</strong></span> Open this page on your computer and not your Samsung mobile. The following method applies to owners of a Samsung Gear VR and allows for viewing of select 360 VR Panoramas of SAOTA's architecture.</p>
+					<p><span><strong>Download Files:</strong></span> Please download one/both of the zip files linked below from a computer and copy the contents of the extracted folder to your Samsung device. Additionally, make sure to Download Oculus 360 Photos from the Oculus Store.</p>
+					<a href="http://www.saota.com/saotavr/360Photos.zip">
+						<div class="instruction-download">
+							<img src="http://i346.photobucket.com/albums/p438/adimitui/ZIP%20Icon%20White_zps5itp4ke4.png"/>
+							<h3>Photo Collection 1</h3>
+						</div>
+					</a>
+					<a href="http://www.saota.com/saotavr/360Photos (2).zip">
+						<div class="instruction-download">
+							<img src="http://i346.photobucket.com/albums/p438/adimitui/ZIP%20Icon%20White_zps5itp4ke4.png"/>
+							<h3>Photo Collection 2</h3>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<a name="parallax">
 		<div id="parallax-section" class="parallax-container">
 			<div class="parallax-layer layer-0" data-parallax-speed="0.05" data-max-scroll="565"></div>
@@ -278,11 +315,14 @@
 							</div>
 							<div class="badges">
 								<a href="https://itunes.apple.com/us/app/saota-vr/id1045921327?mt=8">
-									<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1280px-Download_on_the_App_Store_Badge.svg.png"/>
+									<img src="http://i346.photobucket.com/albums/p438/adimitui/Apple%20Badge_zps3utsctcj.png"/>
 								</a>
 								<a href="https://play.google.com/store/apps/details?id=com.SAOTA.PicViewer&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
-									<img src="http://static1.squarespace.com/static/56db06fc9f7266f8a1014e34/5718e9ce1d07c0048883b2eb/5718ea001d07c0048883b4bc/1461250716092/google-play-badge.png"/>
+									<img src="http://i346.photobucket.com/albums/p438/adimitui/Google%20Badge_zpsc4gnhncb.png"/>
 								</a>
+								<div class="gear-vr" ng-click="showInstructions()">
+									<img src="http://i346.photobucket.com/albums/p438/adimitui/Gear%20VR%20Badge_zpsgv6fmbw3.png"/>
+								</div>
 							</div>
 							<div class="app-summary">
 								<p>SAOTA VR is an application that allows users to explore SAOTA's architectural designs in virtual reality (VR). The app is FREE and once downloaded can be viewed with or without a Google Cardboard viewer; a Samsung Gear VR version will be available in 2016. At present, SAOTA VR contains six projects with multiple viewpoints digitally rendered in 360 degrees, providing users a window into a world of SAOTA designs.</p>
