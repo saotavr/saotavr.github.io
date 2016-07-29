@@ -178,13 +178,13 @@ app.controller("MainCtrl", function($scope) {
 			$("html, body").animate({
 				scrollTop: $("#second-quote-section").offset().top
 			}, "slow");;
-		} else if ($(window).scrollTop() >= Math.floor($("#second-quote-section").offset().top) && $(window).scrollTop() < Math.floor($("#contact-section").offset().top)) {
-			$("html, body").animate({
-				scrollTop: $("#contact-section").offset().top
-			}, "slow");
-		} else if ($(window).scrollTop() >= Math.floor($("#contact-section").offset().top) && $(window).scrollTop() < $("#download-section").offset().top) {
+		} else if ($(window).scrollTop() >= Math.floor($("#second-quote-section").offset().top) && $(window).scrollTop() < Math.floor($("#download-section").offset().top)) {
 			$("html, body").animate({
 				scrollTop: $("#download-section").offset().top
+			}, "slow");
+		} else if ($(window).scrollTop() >= Math.floor($("#download-section").offset().top) && $(window).scrollTop() < $("#contact-section").offset().top) {
+			$("html, body").animate({
+				scrollTop: $("#contact-section").offset().top
 			}, "slow");
 		}
 	};
@@ -212,17 +212,17 @@ app.controller("MainCtrl", function($scope) {
 			$("html, body").animate({
 				scrollTop: $("#model-section").offset().top
 			}, "slow");
-		} else if ($(window).scrollTop() <= $("#contact-section").offset().top && $(window).scrollTop() > $("#second-quote-section").offset().top) {
+		} else if ($(window).scrollTop() <= $("#download-section").offset().top && $(window).scrollTop() > $("#second-quote-section").offset().top) {
 			$("html, body").animate({
 				scrollTop: $("#second-quote-section").offset().top
 			}, "slow");
-		} else if ($(window).scrollTop() <= $("#download-section").offset().top && $(window).scrollTop() > $("#contact-section").offset().top) {
-			$("html, body").animate({
-				scrollTop: $("#contact-section").offset().top
-			}, "slow");
-		} else if ($(window).scrollTop() > $("#download-section").offset().top) {
+		} else if ($(window).scrollTop() <= $("#contact-section").offset().top && $(window).scrollTop() > $("#download-section").offset().top) {
 			$("html, body").animate({
 				scrollTop: $("#download-section").offset().top
+			}, "slow");
+		} else if ($(window).scrollTop() > $("#contact-section").offset().top) {
+			$("html, body").animate({
+				scrollTop: $("#contact-section").offset().top
 			}, "slow");
 		}
 	};

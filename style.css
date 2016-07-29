@@ -313,7 +313,7 @@ div.panorama-box:last-child {
 div.our-virtual-reality-section {
 	padding-top: 20px;
 	padding-bottom: 100px;
-	background: url("http://i346.photobucket.com/albums/p438/adimitui/Background%20003%20Edited_zpsuvhy6vzs.png");
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Background%20003%20Edited_zpsohbl8qv4.png");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -639,115 +639,14 @@ div.background-lightbox p {
 	margin-top: -15px;
 }
 
-/* Contact Page */
-div.contact-section {
-	width: 100%;
-	padding-top: 20px;
-	background: url("http://i346.photobucket.com/albums/p438/adimitui/Background%20005_zpsyvgbzeiz.png");
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-header.contactheader{
-	padding-top: 15px;
-	padding-left: 35px;
-	padding-bottom: 5px;
-	background-color:#333; 
-}
-
-div.contact-us {
-	color: #727272;
-	font-family: 'Roboto Condensed', sans-serif;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 80px;
-}
-
-div.contact-page {
-	width: 100%;
-	margin-bottom: 100px;
-	height: 400px;
-}
-
-div.contact-info {
-	background-color: #333;
-	float: left;
-	font-family: 'Roboto Condensed', sans-serif;
-	padding-top: 15px;
-	padding-left: 35px;
-	padding-bottom: 25px;
-	padding-right: 75px;
-	height: 100%;
-	width: 30%;
-}
-
-div.contact-info h2 {
-	margin-bottom: -20px;
-}
-
-.contact-info-text {
-	color: #FFF;
-}
-
-.emailref:link {
-	color: #FBB03B;
-}
-
-.socialmediaicons {
-	height: 30px;
-	width: 30px;
-}
-
-.embed-map-display {
-	padding-top: .5px;
-}
-
-div.contact-map {
-	width: 70%;
-	float: left;
-	height: 100%;
-	position: relative;
-	transform: translate(0,-19px);
-}
-
-.app-page-header {
-	font-family: 'Roboto Condensed', sans-serif;
-}
-
-.app-page {
-	font-family: 'Roboto Condensed', sans-serif;
-}
-
-div.contact-section div.contact-page a {
-	text-decoration: none;
-	margin-left: 2px;
-	margin-right: 2px;
-}
-
-div.contact-section div.contact-page a:hover img {
-	transform: scale(1.2,1.2);
-}
-
-div.contact-section div.contact-page a:active img {
-	transform: scale(1,1);
-}
-
-#map {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	width: 100%;
-}
-
 /* Download Application */
 div.download-section {
 	width: 100%;
-	padding-bottom: 50px;
+	padding-top: 80px;
+	padding-bottom: 320px;
 	background-color: #000;
 	text-align: center;
-	background: url("http://i346.photobucket.com/albums/p438/adimitui/Background%20004%20Edited_zpsbakzkrno.png");
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Background%20004_zps4vol8v9w.png");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -985,4 +884,106 @@ div.body-text button:hover {
 
 div.body-text button:active {
 	transform: scale(1,1);
+}
+
+/* Contact Page */
+div.contact-section {
+	width: 100%;
+	padding-top: 20px;
+	background: url("http://i346.photobucket.com/albums/p438/adimitui/Background%20005_zpsyvgbzeiz.png");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+header.contactheader{
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-bottom: 5px;
+	background-color:#333; 
+}
+
+div.contact-us {
+	color: #727272;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 80px;
+}
+
+div.contact-page {
+	width: 100%;
+	margin-bottom: 100px;
+	height: 400px;
+}
+
+div.contact-info {
+	background-color: #333;
+	float: left;
+	font-family: 'Roboto Condensed', sans-serif;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-bottom: 25px;
+	padding-right: 75px;
+	height: 100%;
+	width: 30%;
+}
+
+div.contact-info h2 {
+	margin-bottom: -20px;
+}
+
+.contact-info-text {
+	color: #FFF;
+}
+
+.emailref:link {
+	color: #FBB03B;
+}
+
+.socialmediaicons {
+	height: 30px;
+	width: 30px;
+}
+
+.embed-map-display {
+	padding-top: .5px;
+}
+
+div.contact-map {
+	width: 70%;
+	float: left;
+	height: 100%;
+	position: relative;
+	transform: translate(0,-19px);
+}
+
+.app-page-header {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.app-page {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+div.contact-section div.contact-page a {
+	text-decoration: none;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+div.contact-section div.contact-page a:hover img {
+	transform: scale(1.2,1.2);
+}
+
+div.contact-section div.contact-page a:active img {
+	transform: scale(1,1);
+}
+
+#map {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
 }
