@@ -532,6 +532,28 @@ div.quote-tile {
 	padding-left: 25px;
 }
 
+/* 3D Modeling Section */
+div.model-section {
+	width: 100%;
+	padding-top: 20px;
+}
+
+.modeling-hero {
+	font-family: 'Roboto Condensed', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 80px;
+	opacity: 0.2;
+}
+
+.sketchfab-embed-wrapper {
+	border-style: solid;
+    border-left: solid #FBB03B;
+    width: 100%;
+    height: 400px;
+    margin-top: -20px;
+}
+
 /* Second Quote Section */
 div.full-length-container {
 	width: 100%;

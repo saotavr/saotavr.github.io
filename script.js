@@ -160,10 +160,14 @@ app.controller("MainCtrl", function($scope) {
 			$("html, body").animate({
 				scrollTop: $("#our-virtual-reality-section").offset().top
 			}, "slow");
-		} else if ($(window).scrollTop() >= Math.round($("#our-virtual-reality-section").offset().top) && $(window).scrollTop() < Math.floor($("#second-quote-section").offset().top)) {
+		} else if ($(window).scrollTop() >= Math.round($("#our-virtual-reality-section").offset().top) && $(window).scrollTop() < Math.floor($("#model-section").offset().top)) {
+			$("html, body").animate({
+				scrollTop: $("#model-section").offset().top
+			}, "slow");
+		} else if ($(window).scrollTop() >= Math.floor($("#model-section").offset().top) && $(window).scrollTop() < Math.floor($("#second-quote-section").offset().top)) {
 			$("html, body").animate({
 				scrollTop: $("#second-quote-section").offset().top
-			}, "slow");
+			}, "slow");;
 		} else if ($(window).scrollTop() >= Math.floor($("#second-quote-section").offset().top) && $(window).scrollTop() < Math.floor($("#contact-section").offset().top)) {
 			$("html, body").animate({
 				scrollTop: $("#contact-section").offset().top
@@ -190,9 +194,13 @@ app.controller("MainCtrl", function($scope) {
 			$("html, body").animate({
 				scrollTop: $("#panorama-section").offset().top
 			}, "slow");
-		} else if ($(window).scrollTop() <= $("#second-quote-section").offset().top && $(window).scrollTop() > $("#our-virtual-reality-section").offset().top) {
+		} else if ($(window).scrollTop() <= $("#model-section").offset().top && $(window).scrollTop() > $("#our-virtual-reality-section").offset().top) {
 			$("html, body").animate({
 				scrollTop: $("#our-virtual-reality-section").offset().top
+			}, "slow");
+		} else if ($(window).scrollTop() <= $("#second-quote-section").offset().top && $(window).scrollTop() > $("#model-section").offset().top) {
+			$("html, body").animate({
+				scrollTop: $("#model-section").offset().top
 			}, "slow");
 		} else if ($(window).scrollTop() <= $("#contact-section").offset().top && $(window).scrollTop() > $("#second-quote-section").offset().top) {
 			$("html, body").animate({

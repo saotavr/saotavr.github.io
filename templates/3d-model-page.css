@@ -12,4 +12,5 @@
 .sketchfab-embed-wrapper {
 	border-style: solid;
     border-left: solid #FBB238;
+    height: 300px;
 }
