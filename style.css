@@ -120,8 +120,10 @@ li {
 div.navbar-buttons-hamburger {
 	float: left;
 	width: 85%;
-	text-align: right;
 	display: none;
+	text-align: right;
+	position: relative;
+	padding-bottom: 20px;
 }
 
 div.navbar-buttons-hamburger button {
@@ -146,25 +148,52 @@ div.navbar-buttons-hamburger button:active {
 }
 
 .positioner {
-	position: relative;
-	width: 0;
+	position: fixed;
+	width: 250px;
 	height: 0;
-	float: right;
-	z-index: 999999999;
+	z-index: 1000000000;
+	display: inline-block;
+	right: 2.5%;
+	top: 52px;
 }
 
 .hamburger-dropdown-content {
 	display: none;
 	position: absolute;
 	background-color: #429DE8;
-	min-width: 200px;
+	min-width: 250px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	transform: translate(-200px,70px);
-	z-index: 99999999;
+	z-index: 100000000;
+	left: 0;
 }
 
 .show-hamburger-dropdown {
+	display: inline-block;
+}
+
+.dropdown-link {
 	display: block;
+	right: 0;
+	text-decoration: none;
+	font-size: 24px;
+	padding: 10px 20px;
+	background-color: #EEE;
+	border-bottom: 1px solid #DDD;
+	color: #000;
+}
+
+div.dropdown-link {
+	border-top: 1px solid #DDD;
+}
+
+.dropdown-link:hover {
+	background-color: #C9C9C9;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.dropdown-link:active {
+	background-color: #FBB03B;
 }
 
 /* Parallax */
@@ -1071,12 +1100,19 @@ div.contact-section div.contact-page a:active img {
 		height: 72px;
 	}
 
+	div.navbar-logo-container {
+		width: 50%;
+		float: left;
+		text-align: left;
+	}
+
 	div.navbar-buttons-complete {
 		display: none;
 	}
 
 	div.navbar-buttons-hamburger {
 		display: block;
+		width: 50%;
 	}
 
 	img.navbar-logo {
