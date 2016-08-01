@@ -293,8 +293,6 @@ app.controller("MainCtrl", function($scope) {
 			scrollDown();
 		} else if (event.keyCode === 38) {
 			scrollUp();
-		} else if (event.keyCode === 13) {
-			console.log($(window).scrollTop());
 		}
 	});
 

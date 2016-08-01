@@ -12,30 +12,39 @@
 </head>
 <body ng-app="saotaApp" ng-controller="MainCtrl">
 	<div class="navbar">
-		<div class="navbar-container">
-			<ul>
+		<div class="navbar-container clearfix">
+			<div class="navbar-logo-container">
 				<a href="#parallax">
-					<img class="nav-bar-logo" src="https://dl.dropboxusercontent.com/u/7090379/SAOTA%20VR%20WEBSITE/images/u707-5_2x.png?crc=4120321966"/>
+					<img class="navbar-logo" src="http://i346.photobucket.com/albums/p438/adimitui/SAOTA%20Logo%20001%20Cropped_zps1v5n0mch.png"/>
 				</a>
-				<li>
-					<a id="contact-nav-button" href="#contact" class="nav-button">Contact</a>
-				</li>
-				<li>
-					<a id="download-nav-button" href="#download" class="nav-button">App</a>
-				</li>
-				<li>
-					<a id="model-nav-button" href="#model" class="nav-button">3D Modeling</a>
-				</li>
-				<li>
-					<a id="about-nav-button" href="#about" class="nav-button">About VR</a>
-				</li>
-				<li>
-					<a id="featured-projects-nav-button" href="#featured-projects" class="nav-button">Featured Projects</a>
-				</li>
-				<li>
-					<div id="video-nav-button" ng-click="goToVideo()" class="nav-button">Video</div>
-				</li>
-			</ul>
+			</div>
+			<div class="navbar-buttons-complete">
+				<ul>
+					<li>
+						<a id="contact-nav-button" href="#contact" class="nav-button">Contact</a>
+					</li>
+					<li>
+						<a id="download-nav-button" href="#download" class="nav-button">App</a>
+					</li>
+					<li>
+						<a id="model-nav-button" href="#model" class="nav-button">3D Modeling</a>
+					</li>
+					<li>
+						<a id="about-nav-button" href="#about" class="nav-button">About VR</a>
+					</li>
+					<li>
+						<a id="featured-projects-nav-button" href="#featured-projects" class="nav-button">Featured Projects</a>
+					</li>
+					<li>
+						<div id="video-nav-button" ng-click="goToVideo()" class="nav-button">Video</div>
+					</li>
+				</ul>
+			</div>
+			<div class="navbar-buttons-hamburger">
+				<button ng-click="showMenu()">
+					<img src="http://i346.photobucket.com/albums/p438/adimitui/Hamburger%20Icon%20001%20White_zpsjlbiykt1.png"/>
+				</button>
+			</div>
 		</div>
 	</div>
 

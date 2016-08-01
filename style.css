@@ -69,13 +69,51 @@ div.navbar-container {
 	display: block;
 }
 
-img.nav-bar-logo {
-	height: 40px;
-	width: auto;
+div.navbar-logo-container {
+	width: 15%;
 	float: left;
-	margin-bottom: -15px; 
-	margin-left: -80px;
-	padding-top: 5px;
+	text-align: left;
+}
+
+img.navbar-logo {
+	height: 25px;
+	width: auto;
+	margin-top: 19px;
+}
+
+div.navbar-buttons-complete {
+	float: left;
+	width: 85%;
+	text-align: right;
+	display: block;
+}
+
+div.navbar-buttons-hamburger {
+	float: left;
+	width: 85%;
+	text-align: right;
+	display: none;
+}
+
+div.navbar-buttons-hamburger button {
+	position: relative;
+	transform: translate(0, 20px);
+	padding: 10px 10px 8px 10px;
+	background-color: #CACACA;
+	border: none;
+	border-radius: 5px;
+}
+
+div.navbar-buttons-hamburger img {
+	width: 30px;
+}
+
+div.navbar-buttons-hamburger button:hover {
+	background-color: #000;
+}
+
+div.navbar-buttons-hamburger button:active {
+	background-color: #FBB03B;
 }
 
 li {
@@ -609,7 +647,7 @@ div.quote-section img.right-quotation-mark-2 {
 
 /* Project Previews */
 div.background-lightbox, div.background-lightbox-gear-vr {
-	background-color: rgba(0,0,0,0.9);
+	background-color: rgba(0,0,0,0.8);
 	top: 0;
 	left: 0;
 	right: 0;
@@ -997,4 +1035,23 @@ div.contact-section div.contact-page a:active img {
 	top: 0;
 	bottom: 0;
 	width: 100%;
+}
+
+/* Mobile Optimization */
+@media(max-width: 970px) {
+	div.navbar-container {
+		height: 72px;
+	}
+
+	div.navbar-buttons-complete {
+		display: none;
+	}
+
+	div.navbar-buttons-hamburger {
+		display: block;
+	}
+
+	img.navbar-logo {
+		height: 50px;
+	}
 }
