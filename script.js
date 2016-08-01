@@ -150,26 +150,69 @@ app.controller("MainCtrl", function($scope) {
 	$scope.removePreview = function() {
 		var lightbox = document.querySelectorAll("#background-lightbox")[0];
 		lightbox.classList.remove("show-lightbox");
-	}
+	};
 
 	$scope.showInstructions = function() {
 		var lightbox = document.querySelectorAll("#background-lightbox-gear-vr")[0];
 		lightbox.classList.add("show-lightbox");
 		var body = document.body;
 		body.classList.add("no-scroll");
-	}
+	};
 
 	$scope.removeInstructions = function() {
 		var lightbox = document.querySelectorAll("#background-lightbox-gear-vr")[0];
 		lightbox.classList.remove("show-lightbox");
 		var body = document.body;
 		body.classList.remove("no-scroll");
-	}
+	};
+
+	var videoLocation = 390;
+	var firstQuoteLocation = 960;
+
+	window.onscroll = function(event) {
+		console.log("Scrolling");
+		if ($(window).scrollTop() >= Math.floor($("#contact-section").offset().top)) {
+			setActive("contact-nav-button");
+		} else if ($(window).scrollTop() >= Math.floor($("#download-section").offset().top)) {
+			setActive("download-nav-button");
+		} else if ($(window).scrollTop() >= Math.floor($("#second-quote-section").offset().top)) {
+			setInactive("all"); // All buttons become inactive
+		} else if ($(window).scrollTop() >= Math.floor($("#model-section").offset().top)) {
+			setActive("model-nav-button");
+		} else if ($(window).scrollTop() >= Math.floor($("#our-virtual-reality-section").offset().top)) {
+			setActive("about-nav-button");
+		} else if ($(window).scrollTop() >= Math.floor($("#panorama-section").offset().top)) {
+			setActive("featured-projects-nav-button");
+		} else if ($(window).scrollTop() >= Math.floor($("#first-quote-section").offset().top)) {
+			setInactive("all");
+		} else if ($(window).scrollTop() >= videoLocation) {
+			setActive("video-nav-button");
+		} else if ($(window).scrollTop() >= 0) {
+			setInactive("all");
+		}
+	};
+
+	var setActive = function(name) {
+		angular.element(document).ready(function() {
+			var button = document.getElementById(name);
+			button.classList.add("active");
+		});
+		setInactive(name);
+	};
+
+	var setInactive = function(name) {
+		var buttonNames = ["video-nav-button", "featured-projects-nav-button", "about-nav-button", "model-nav-button", "download-nav-button", "contact-nav-button"];
+		angular.element(document).ready(function() {
+			for (var i = 0; i < buttonNames.length; i++) {
+				if (buttonNames[i] !== name) {
+					var button = document.getElementById(buttonNames[i]);
+					button.classList.remove("active");
+				}
+			}
+		});
+	};
 
 	var scrollDown = function() {
-		var videoLocation = 390;
-		var firstQuoteLocation = 960;
-
 		if ($(window).scrollTop() >= 0 && $(window).scrollTop() < videoLocation) {
 			$("html, body").animate({
 				scrollTop: videoLocation
@@ -206,8 +249,6 @@ app.controller("MainCtrl", function($scope) {
 	};
 
 	var scrollUp = function() {
-		var videoLocation = 390;
-
 		if ($(window).scrollTop() <= videoLocation && $(window).scrollTop() > Math.floor($("#parallax-section").offset().top)) {
 			$("html, body").animate({
 				scrollTop: Math.floor($("#parallax-section").offset().top)
@@ -218,7 +259,7 @@ app.controller("MainCtrl", function($scope) {
 			}, "slow");
 		} else if ($(window).scrollTop() <= Math.floor($("#panorama-section").offset().top) && $(window).scrollTop() > Math.floor($("#first-quote-section").offset().top)) {
 			$("html, body").animate({
-				scrollTop: Math.floor($("#first-quote-section").offset().top
+				scrollTop: Math.floor($("#first-quote-section").offset().top)
 			}, "slow");
 		} else if ($(window).scrollTop() <= Math.floor($("#our-virtual-reality-section").offset().top) && $(window).scrollTop() > Math.floor($("#panorama-section").offset().top)) {
 			$("html, body").animate({

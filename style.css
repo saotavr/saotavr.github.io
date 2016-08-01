@@ -102,7 +102,7 @@ li {
 	background-color: #f2f2f2;
 }
 
-.nav-button:active {
+.nav-button:active, .nav-button.active {
 	background-color: #FBB03B;
 }
 
