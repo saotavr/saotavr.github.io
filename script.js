@@ -202,7 +202,7 @@ app.controller("MainCtrl", function($scope) {
 			}, "slow");
 		} else if ($(window).scrollTop() <= $("#our-virtual-reality-section").offset().top && $(window).scrollTop() > $("#panorama-section").offset().top) {
 			$("html, body").animate({
-				scrollTop: $("#panorama-section").offset().top
+				scrollTop: Math.round($("#panorama-section").offset().top)
 			}, "slow");
 		} else if ($(window).scrollTop() <= $("#model-section").offset().top && $(window).scrollTop() > $("#our-virtual-reality-section").offset().top) {
 			$("html, body").animate({
