@@ -73,6 +73,11 @@ app.controller("MainCtrl", function($scope) {
 
 	new ParallaxManager('.parallax-layer');
 
+	$scope.showMenu = function() {
+		var dropdownContent = document.getElementById("hamburger-dropdown-content");
+		dropdownContent.classList.toggle("show-hamburger-dropdown");
+	}
+
 	$scope.goToVideo = function() {
 		angular.element(document).ready(function() {
 			$("html, body").animate({
