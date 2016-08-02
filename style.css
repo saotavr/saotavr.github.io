@@ -64,6 +64,10 @@ div.navbar {
 	right: 0;
 	position: fixed;
 	z-index: 10000;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 div.navbar-container {
