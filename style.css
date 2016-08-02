@@ -802,10 +802,12 @@ div.badges div.gear-vr {
 
 div.app-summary {
 	font-family: 'Roboto Condensed', sans-serif;
-	width: 700px;
+	width: 100%;
 	font-size: 30px;
 	margin: 0px auto;
 	display: block;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 div.app-summary p {
@@ -1103,6 +1105,10 @@ div.contact-section div.contact-page a:active img {
 	img.navbar-logo {
 		height: 40px;
 	}
+
+	div.download-box {
+		width: 80%;
+	}
 }
 
 @media(max-width: 880px) {
@@ -1145,6 +1151,10 @@ div.contact-section div.contact-page a:active img {
 
 	div.quote-section h2 {
 		font-size: 30px;
+	}
+
+	div.quote-section h3 {
+		font-size: 24px;
 	}
 
 	div.our-virtual-reality-section div.container {
