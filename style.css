@@ -682,14 +682,6 @@ div.model-section {
 	padding-top: 20px;
 }
 
-.modeling-hero {
-	font-family: 'Roboto Condensed', sans-serif;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 80px;
-	opacity: 0.2;
-}
-
 .sketchfab-embed-wrapper {
 	border-style: solid;
     border-left: solid #FBB03B;
@@ -1119,6 +1111,12 @@ div.contact-section div.contact-page a:active img {
 @media(max-width: 880px) {
 	div.quote-section-width {
 		width: 60%;
+	}
+}
+
+@media(max-width: 840px) {
+	h1 {
+		font-size: 60px;
 	}
 }
 
