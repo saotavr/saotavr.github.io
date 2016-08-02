@@ -458,12 +458,22 @@ div.text-tile p {
 }
 
 div.photo-tile {
+	position: relative;
+	width: 15vw;
+	height: 15vw;
 	float: left;
 	-webkit-filter: grayscale(100%);
 	-moz-filter: grayscale(100%);
 	-o-filter: grayscale(100%);
 	filter: grayscale(100%);
 	text-align: center;
+}
+
+div.photo-tile.no-grayscale {
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+	filter: grayscale(0%);
 }
 
 div.photo-tile:hover {
@@ -478,26 +488,23 @@ div.photo-tile.clickable:hover {
 	cursor: pointer;
 }
 
-div.photo-tile.goggle {
+div.photo-tile .goggle {
 	background-color: #FFBF00;
-	width: 15vw;
-	height: 15vw;
-	-webkit-filter: grayscale(0%);
-	-moz-filter: grayscale(0%);
-	-o-filter: grayscale(0%);
-	filter: grayscale(0%);
+	width: 100%;
+	height: 100%;
 }
 
-div.photo-tile.goggle img {
+div.photo-tile .goggle img {
 	width: 100px;
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
 }
 
-div.photo-tile.first {
-	width: 15vw;
-	height: 15vw;
+div.photo-tile .first {
+	position: absolute;
+	width: 100%;
+	height: 100%;
 	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20006_zpsi7fsigpw.jpg") center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -505,9 +512,9 @@ div.photo-tile.first {
 	background-size: cover;
 }
 
-div.photo-tile.second {
-	width: 15vw;
-	height: 15vw;
+div.photo-tile .second {
+	width: 100%;
+	height: 100%;
 	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20001_zpsqtmnkavn.jpg") center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -515,28 +522,9 @@ div.photo-tile.second {
 	background-size: cover;
 }
 
-div.photo-tile.building {
-	width: 15vw;
-	height: 15vw;
-	background-color: #FFBF00;
-	-webkit-filter: grayscale(0%);
-	-moz-filter: grayscale(0%);
-	-o-filter: grayscale(0%);
-	filter: grayscale(0%);
-	text-align: center;
-}
-
-div.photo-tile.building img {
-	width: 80px;
-	height: auto;
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-}
-
-div.photo-tile.third {
-	width: 15vw;
-	height: 15vw;
+div.photo-tile .third {
+	width: 100%;
+	height: 100%;
 	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20002_zps152vtxp9.jpg") center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -544,9 +532,9 @@ div.photo-tile.third {
 	background-size: cover;
 }
 
-div.photo-tile.fourth {
-	width: 15vw;
-	height: 15vw;
+div.photo-tile .fourth {
+	width: 100%;
+	height: 100%;
 	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20003_zpshp2qo4mj.jpg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -555,9 +543,9 @@ div.photo-tile.fourth {
 	background-position: -50px 0px;
 }
 
-div.photo-tile.fifth {
-	width: 15vw;
-	height: 15vw;
+div.photo-tile .fifth {
+	width: 100%;
+	height: 100%;
 	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20004_zpscc8jhkkp.jpg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -566,18 +554,14 @@ div.photo-tile.fifth {
 	background-position: -50px 0px;
 }
 
-div.photo-tile.screen {
-	width: 15vw;
-	height: 15vw;
+div.photo-tile .screen {
+	width: 100%;
+	height: 100%;
 	background-color: #FFBF00;
-	-webkit-filter: grayscale(0%);
-	-moz-filter: grayscale(0%);
-	-o-filter: grayscale(0%);
-	filter: grayscale(0%);
 	text-align: center;
 }
 
-div.photo-tile.screen img {
+div.photo-tile .screen img {
 	width: 80px;
 	height: auto;
 	position: relative;
@@ -585,9 +569,9 @@ div.photo-tile.screen img {
 	transform: translateY(-50%);
 }
 
-div.photo-tile.sixth {
-	width: 15vw;
-	height: 15vw;
+div.photo-tile .sixth {
+	width: 100%;
+	height: 100%;
 	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20005_zpshxhpnm35.jpg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -595,9 +579,9 @@ div.photo-tile.sixth {
 	background-size: cover;
 }
 
-div.photo-tile.seventh {
-	width: 15vw;
-	height: 15vw;
+div.photo-tile .seventh {
+	width: 100%;
+	height: 100%;
 	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20007_zpsaclgjqag.jpg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -606,9 +590,9 @@ div.photo-tile.seventh {
 	background-position: -70px 0px;
 }
 
-div.photo-tile.eighth {
-	width: 15vw;
-	height: 15vw;
+div.photo-tile .eighth {
+	width: 100%;
+	height: 100%;
 	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20008_zpsmoprlt1q.jpg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -617,18 +601,14 @@ div.photo-tile.eighth {
 	background-position: -40px 0px;
 }
 
-div.photo-tile.design {
-	width: 15vw;
-	height: 15vw;
+div.photo-tile .design {
+	width: 100%;
+	height: 100%;
 	background-color: #FFBF00;
-	-webkit-filter: grayscale(0%);
-	-moz-filter: grayscale(0%);
-	-o-filter: grayscale(0%);
-	filter: grayscale(0%);
 	text-align: center;
 }
 
-div.photo-tile.design img {
+div.photo-tile .design img {
 	width: 80px;
 	height: auto;
 	position: relative;
@@ -636,9 +616,9 @@ div.photo-tile.design img {
 	transform: translateY(-50%);
 }
 
-div.photo-tile.ninth {
-	width: 15vw;
-	height: 15vw;
+div.photo-tile .ninth {
+	width: 100%;
+	height: 100%;
 	background: url("http://i346.photobucket.com/albums/p438/adimitui/Tile%20009_zpstqf1cyen.jpg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -647,9 +627,9 @@ div.photo-tile.ninth {
 	background-position: -30px 0px;
 }
 
-div.photo-tile.tenth {
-	width: 15vw;
-	height: 15vw;
+div.photo-tile .tenth {
+	width: 100%;
+	height: 100%;
 	background: url("http://www.saota.com/wp-content/uploads/2015/05/SAOTA_SN_S2_1.jpg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -658,9 +638,9 @@ div.photo-tile.tenth {
 	background-position: -30px 0px;
 }
 
-div.photo-tile.eleventh {
-	width: 15vw;
-	height: 15vw;
+div.photo-tile .eleventh {
+	width: 100%;
+	height: 100%;
 	background: url("http://www.saota.com/wp-content/uploads/2015/05/SAOTA_SN_Saturne_1.jpg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -1124,6 +1104,11 @@ div.contact-section div.contact-page a:active img {
 @media(max-width: 880px) {
 	div.quote-section-width {
 		width: 60%;
+	}
+
+	div.photo-tile {
+		width: 25vw;
+		height: 25vw;
 	}
 }
 
