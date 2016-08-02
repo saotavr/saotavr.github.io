@@ -495,7 +495,8 @@ div.photo-tile .goggle {
 }
 
 div.photo-tile .goggle img {
-	width: 100px;
+	width: 8vw;
+	height: auto;
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
@@ -562,7 +563,8 @@ div.photo-tile .screen {
 }
 
 div.photo-tile .screen img {
-	width: 80px;
+	width: 6vw;
+	height: auto;
 	height: auto;
 	position: relative;
 	top: 50%;
@@ -609,7 +611,8 @@ div.photo-tile .design {
 }
 
 div.photo-tile .design img {
-	width: 80px;
+	width: 6vw;
+	height: auto;
 	height: auto;
 	position: relative;
 	top: 50%;
@@ -1110,6 +1113,18 @@ div.contact-section div.contact-page a:active img {
 		width: 25vw;
 		height: 25vw;
 	}
+
+	div.photo-tile .goggle img {
+		width: 12vw;
+	}
+
+	div.photo-tile .screen img {
+		width: 10vw;
+	}
+
+	div.photo-tile .design img {
+		width: 10vw;
+	}
 }
 
 @media(max-width: 840px) {
@@ -1129,5 +1144,31 @@ div.contact-section div.contact-page a:active img {
 
 	div.quote-section h2 {
 		font-size: 30px;
+	}
+
+	div.our-virtual-reality-section div.container {
+		width: 100vw;
+	}
+
+	div.text-tile {
+		width: 100vw;
+		padding: 0px 50px 0px 20px;
+	}
+
+	div.photo-tile {
+		width: 33.333vw;
+		height: 33.333vw;
+	}
+
+	div.photo-tile .goggle img {
+		width: 18vw;
+	}
+
+	div.photo-tile .screen img {
+		width: 14vw;
+	}
+
+	div.photo-tile .design img {
+		width: 14vw;
 	}
 }
