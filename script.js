@@ -86,13 +86,6 @@ app.controller("MainCtrl", function($scope) {
 		});
 	};
 
-	$scope.checkVideoStatus = function() {
-		angular.element(document).ready(function() {
-			var videoFrame = document.getElementById("promo-vid");
-			videoFrame.classList.toggle("grayscale");
-		});
-	}
-
 	var firstPanoramaLightbox = document.querySelectorAll("#first-panorama-lightbox")[0];
 	var secondPanoramaLightbox = document.querySelectorAll("#second-panorama-lightbox")[0];
 	var thirdPanoramaLightbox = document.querySelectorAll("#third-panorama-lightbox")[0];

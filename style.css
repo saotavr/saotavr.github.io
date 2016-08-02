@@ -24,6 +24,11 @@ body.no-scroll {
 	text-align: right;
 }
 
+div.full-length-container {
+	width: 100%;
+	display: block;
+}
+
 /* Clearfix */
 .clearfix:after {
 	visibility: hidden;
@@ -702,20 +707,6 @@ div.model-section {
     width: 100%;
     height: 400px;
     margin-top: -20px;
-}
-
-/* Second Quote Section */
-div.full-length-container {
-	width: 100%;
-	display: block;
-}
-
-div.quote-section img.left-quotation-mark-2 {
-	transform: translate(-40px, -30px);
-}
-
-div.quote-section img.right-quotation-mark-2 {
-	transform: translate(560px, 70px);
 }
 
 /* Project Previews */
