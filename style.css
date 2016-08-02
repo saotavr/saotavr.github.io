@@ -1083,6 +1083,19 @@ div.contact-section div.contact-page a:active img {
 }
 
 /* Mobile Optimization */
+@media(max-width: 1302px) {
+	div.text-tile {
+		width: 60vw;
+	}
+}
+
+@media(max-width: 1149px) {
+	div.text-tile {
+		width: 75vw;
+		height: auto;
+	}
+}
+
 @media(max-width: 970px) {
 	div.navbar-container {
 		height: 60px;
