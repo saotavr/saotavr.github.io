@@ -1182,4 +1182,32 @@ div.contact-section div.contact-page a:active img {
 	div.photo-tile .design img {
 		width: 14vw;
 	}
+
+	div.download-box {
+		width: 100%;
+	}
+}
+
+@media(max-width: 650px) {
+	div.download-section h1 {
+		font-size: 35px;
+		margin-top: 20px;
+	}
+
+	div.download-section img {
+		width: 70vw;
+	}
+
+	div.badges img {
+		display: block;
+		width: 35vw;
+		margin: 0px auto;
+		margin-bottom: 5px;
+	}
+
+	div.badges div.gear-vr {
+		width: 35vw;
+		display: block;
+		margin: 0px auto;
+	}
 }
