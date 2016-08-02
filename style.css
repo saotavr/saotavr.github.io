@@ -691,9 +691,10 @@ div.background-lightbox.show-lightbox, div.background-lightbox-gear-vr.show-ligh
 }
 
 div.background-lightbox img {
+	max-width: calc(100vw - 20px);
 	max-height: calc(100vh - 150px);
-	width: auto;
 	position: relative;
+	text-align: center;
 	top: 50%;
 	margin-top: 50px;
 	box-shadow: 2px 1px 1px rgba(0,0,0,0.5);
