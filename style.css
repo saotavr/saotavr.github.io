@@ -317,16 +317,6 @@ div.quote-section.second {
 	background-size: cover;
 }
 
-div.quotation-mark {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	opacity: 0.1;
-	text-align: left;
-}
-
 div.quote-section-width {
 	position: relative;
 	width: 50%;
