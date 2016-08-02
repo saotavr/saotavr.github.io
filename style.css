@@ -977,13 +977,6 @@ div.contact-section {
 	background-size: cover;
 }
 
-header.contactheader{
-	padding-top: 15px;
-	padding-left: 35px;
-	padding-bottom: 5px;
-	background-color:#333; 
-}
-
 div.contact-us {
 	color: #727272;
 	font-family: 'Roboto Condensed', sans-serif;
@@ -1000,14 +993,16 @@ div.contact-page {
 
 div.contact-info {
 	background-color: #333;
-	float: left;
+	float: right;
 	font-family: 'Roboto Condensed', sans-serif;
 	padding-top: 15px;
 	padding-left: 35px;
 	padding-bottom: 25px;
-	padding-right: 75px;
+	padding-right: 30px;
 	height: 100%;
 	width: 30%;
+	position: relative;
+	transform: translate(0,-19px);
 }
 
 div.contact-info h2 {
@@ -1022,7 +1017,7 @@ div.contact-info h2 {
 	color: #FBB03B;
 }
 
-.socialmediaicons {
+.social-media-icon {
 	height: 30px;
 	width: 30px;
 }
@@ -1033,10 +1028,9 @@ div.contact-info h2 {
 
 div.contact-map {
 	width: 70%;
-	float: left;
+	float: right;
 	height: 100%;
 	position: relative;
-	transform: translate(0,-19px);
 }
 
 .app-page-header {
@@ -1132,6 +1126,14 @@ div.contact-section div.contact-page a:active img {
 	div.photo-tile .design img {
 		width: 10vw;
 	}
+
+	div.contact-info {
+		width: 40%;
+	}
+
+	div.contact-map {
+		width: 60%;
+	}
 }
 
 @media(max-width: 840px) {
@@ -1188,7 +1190,7 @@ div.contact-section div.contact-page a:active img {
 	}
 }
 
-@media(max-width: 650px) {
+@media(max-width: 652px) {
 	div.download-section h1 {
 		font-size: 35px;
 		margin-top: 20px;
@@ -1209,5 +1211,62 @@ div.contact-section div.contact-page a:active img {
 		width: 50vw;
 		display: block;
 		margin: 0px auto;
+	}
+
+	div.contact-info {
+		width: 50%;
+	}
+
+	div.contact-map {
+		width: 50%;
+	}
+}
+
+@media(max-width: 520px) {
+	div.contact-section h1 {
+		margin-bottom: 0px;
+	}
+
+	div.contact-page {
+		width: 100%;
+		height: 800px;
+		margin-bottom: 0px;
+	}
+
+	div.contact-info {
+		width: 100%;
+		height: 50%;
+		padding-top: 0;
+		text-align: center;
+	}
+
+	div.contact-info h2 {
+		font-size: 30px; 
+		margin-bottom: -20px
+	}
+
+	div.contact-info p {
+		font-size: 20px;
+	}
+
+	.social-media-icon {
+		height: 50px;
+		width: 50px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	div.contact-map {
+		width: 100%;
+		height: 50%;
+	}
+}
+
+@media(max-width: 425px) {
+	.social-media-icon {
+		height: 35px;
+		width: 35px;
+		margin-left: 2px;
+		margin-right: 2px;
 	}
 }
