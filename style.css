@@ -8,6 +8,8 @@ body {
 	background-color: #000;
 	margin: 0;
 	padding: 0;
+	position: relative;
+	z-index: -1000;
 }
 
 body.no-scroll {
@@ -270,6 +272,14 @@ div.placeholder {
 div.video-section {
 	width: 100%;
 	height: 56.25vw;
+	position: relative;
+}
+
+div.video-section.grayscale {
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
 }
 
 div.video-section iframe {
@@ -291,6 +301,7 @@ div.quote-section.first {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	background-position: center;
 }
 
 div.quote-section.second {
@@ -313,8 +324,9 @@ div.quotation-mark {
 
 div.quote-section-width {
 	position: relative;
-	width: 700px;
+	width: 50%;
 	margin: 0px auto;
+	border: 1px solid white;
 }
 
 div.quote-section img {
@@ -325,11 +337,19 @@ div.quote-section img {
 }
 
 div.quote-section img.left-quotation-mark {
-	transform: translate(-40px, -30px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(-50px,-30px);
+	opacity: 0.2;
 }
 
 div.quote-section img.right-quotation-mark {
-	transform: translate(560px, 40px);
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	transform: translate(50px,30px);
+	opacity: 0.2;
 }
 
 div.quote-section h2 {
