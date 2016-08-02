@@ -1136,6 +1136,12 @@ div.contact-section div.contact-page a:active img {
 	}
 }
 
+@media(max-width: 880px) {
+	div.quote-section-width {
+		width: 60%;
+	}
+}
+
 @media(max-width: 769px) {
 	div.navbar-logo-container {
 		width: 80%;
@@ -1143,5 +1149,9 @@ div.contact-section div.contact-page a:active img {
 
 	div.navbar-buttons-hamburger {
 		width: 20%;
+	}
+
+	div.quote-section h2 {
+		font-size: 30px;
 	}
 }
