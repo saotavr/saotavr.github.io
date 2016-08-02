@@ -162,6 +162,10 @@ div.navbar-buttons-hamburger button:active {
 	display: inline-block;
 	right: 2.5%;
 	top: 43px;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 .hamburger-dropdown-content {
@@ -405,6 +409,10 @@ div.panorama-lightbox {
 	bottom: 0;
 	background-color: rgba(51,51,51,0.5);
 	display: fixed;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 div.panorama-lightbox:hover {
@@ -688,6 +696,10 @@ div.background-lightbox, div.background-lightbox-gear-vr {
 	display: none;
 	text-align: center;
 	z-index: 1000;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 div.background-lightbox.show-lightbox, div.background-lightbox-gear-vr.show-lightbox {
