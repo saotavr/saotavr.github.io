@@ -1110,6 +1110,12 @@ div.contact-section div.contact-page a:active img {
 	}
 }
 
+@media(max-width: 1160px) {
+	div.instruction-box {
+		width: 70%;
+	}
+}
+
 @media(max-width: 1149px) {
 	div.text-tile {
 		width: 75vw;
@@ -1118,6 +1124,10 @@ div.contact-section div.contact-page a:active img {
 }
 
 @media(max-width: 970px) {
+	div.instruction-box {
+		width: 80%;
+	}
+
 	div.navbar-container {
 		height: 60px;
 	}
@@ -1178,6 +1188,22 @@ div.contact-section div.contact-page a:active img {
 }
 
 @media(max-width: 840px) {
+	div.instruction-box {
+		width: 90%;
+	}
+
+	div.instruction-download {
+		width: 120px; 
+	}
+
+	div.instruction-box-header > div.instruction-box-header-divide:first-child {
+		width: 80%;
+	}
+
+	div.instruction-box-header > div.instruction-box-header-divide:nth-child(2) {
+		width: 20%;
+	}
+
 	h1 {
 		font-size: 60px;
 	}
@@ -1309,5 +1335,12 @@ div.contact-section div.contact-page a:active img {
 		width: 35px;
 		margin-left: 2px;
 		margin-right: 2px;
+	}
+}
+
+@media(max-width: 333px) {
+	div.instruction-download {
+		margin-bottom: 10px;
+		width: 200px;
 	}
 }
