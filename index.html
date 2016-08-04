@@ -11,9 +11,9 @@
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' rel='stylesheet'/>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<!-- <link rel="stylesheet" href="jquery.mobile-1.4.5.css"> -->
+	<script src="jquery-1.11.3.js"></script>
+	<script src="jquery.mobile-1.4.5.js"></script>
 </head>
 <body ng-app="saotaApp" ng-controller="MainCtrl">
 	<div class="navbar" data-role="header" data-position="fixed">
@@ -38,7 +38,7 @@
 						<a id="about-nav-button" href="#about" class="nav-button">About VR</a>
 					</li>
 					<li>
-						<a id="featured-projects-nav-button" href="#featured-projects" class="nav-button">Featured</a>
+						<a id="featured-projects-nav-button" href="#featured-projects" class="nav-button">Featured Projects</a>
 					</li>
 					<li>
 						<div id="video-nav-button" ng-click="goToVideo()" class="nav-button">Video</div>
@@ -395,7 +395,6 @@
 
 	<script src="angular.js"></script>
 	<script src="angular-route.js"></script>
-	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="script.js"></script>
 
 	<script>
