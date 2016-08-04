@@ -64,6 +64,11 @@ div.full-length-container {
 	background: none !important;
 }
 
+.ui-content, .ui-page {
+	padding-top: 0px !important;
+	height: 0px !important;
+}
+
 /* Navigation bar */
 div.navbar {
 	margin: 0;
@@ -411,6 +416,11 @@ div.panorama-box {
 	border-bottom: 3px solid #FFF;
 }
 
+div.panorama-box.extension {
+	height: 500px !important;
+	transition: height 1s;
+}
+
 div.panorama-box:nth-child(2) {
 	border-top: 3px solid #FFF;
 }
@@ -434,10 +444,6 @@ div.panorama-lightbox:hover {
 	cursor: pointer;
 }
 
-.panorama-lightbox.hide-lightbox {
-	display: none;
-}
-
 div.panorama-box h2 {
 	font-family: "Roboto Condensed";
 	color: #FFF;
@@ -445,6 +451,11 @@ div.panorama-box h2 {
 	text-transform: uppercase;
 	font-size: 50px;
 	text-shadow: 2px 1px 1px rgba(0,0,0,0.5);
+	display: block;
+}
+
+.panorama-lightbox.hide-lightbox {
+	display: none;
 }
 
 div.panorama-box:last-child {

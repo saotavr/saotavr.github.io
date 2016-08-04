@@ -1,4 +1,4 @@
-var app = angular.module("saotaApp", ["ngRoute"]);
+var app = angular.module("saotaApp", ["ngRoute", "ngTouch"]);
 
 app.config(function($routeProvider) {
 	$routeProvider.when("/", {
@@ -10,10 +10,9 @@ app.config(function($routeProvider) {
 });
 
 app.controller("MainCtrl", function($scope) {
-	var interval = setInterval(function() {
-		$.mobile.loading("hide");
-		clearInterval(interval);
-	}, 1);
+	$scope.test = function() {
+		console.log("Touch event firing");
+	};
 
 	var ParallaxManager, ParallaxPart;
 
@@ -96,6 +95,9 @@ app.controller("MainCtrl", function($scope) {
 	var thirdPanoramaLightbox = document.querySelectorAll("#third-panorama-lightbox")[0];
 	var fourthPanoramaLightbox = document.querySelectorAll("#fourth-panorama-lightbox")[0];
 
+	var firstPanoramaBox = document.querySelectorAll("#first-panorama")[0];
+	var firstPanoramaLightboxTitle = document.querySelectorAll("#first-panorama-lightbox-title")[0];
+
 	window.onclick = function(event) {
 		if (!event.target.matches(".panorama-box")) {
 			firstPanoramaLightbox.classList.remove("hide-lightbox");
@@ -111,9 +113,10 @@ app.controller("MainCtrl", function($scope) {
 
 	$scope.revealFirstPanorama = function() {
 		angular.element(document).ready(function() {
-			firstPanoramaLightbox.classList.add("hide-lightbox");
+			console.log(firstPanoramaLightbox);
 			document.getElementById("first-panorama").style.transition = "height 1s";
 			document.getElementById("first-panorama").style.height = "500px";
+			console.log("Finished");
 		});
 	};
 
@@ -182,7 +185,6 @@ app.controller("MainCtrl", function($scope) {
 	var firstQuoteLocation = 960;
 
 	window.onscroll = function(event) {
-		console.log("Scrolling");
 		if ($(window).scrollTop() >= Math.floor($("#contact-section").offset().top)) {
 			setActive("contact-nav-button");
 		} else if ($(window).scrollTop() >= Math.floor($("#download-section").offset().top)) {
