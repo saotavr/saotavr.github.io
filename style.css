@@ -215,6 +215,7 @@ div.dropdown-link {
 	height: 850px;
 	display: block;
 	z-index: -100;
+	transform: translate(0,-15px);
 }
 
 .parallax-layer {

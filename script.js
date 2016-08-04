@@ -141,15 +141,17 @@ app.controller("MainCtrl", function($scope) {
 		console.log(event.target);
 		var lightbox = document.querySelectorAll("#background-lightbox")[0];
 		lightbox.classList.add("show-lightbox");
+
+		angular.element(document).ready(function() {
+			var temp = "" + event.target.id + "";
+			var split = temp.split("-");
+			temp = split.join(" ");
+			$scope.projectName = temp.toUpperCase();
+			console.log($scope.projectName);
+		});
+
 		$scope.previewUrl = imageUrl;
 		$scope.projectPageUrl = "http://www.saota.com/project/" + event.target.id + "/";
-
-		var temp = "" + event.target.id + "";
-		var split = temp.split("-");
-		temp = split.join(" ");
-		console.log(temp);
-		$scope.projectName = temp.toUpperCase();
-		console.log($scope.projectName);
 	};
 
 	$scope.removePreview = function() {

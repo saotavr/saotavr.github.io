@@ -9,11 +9,13 @@
 
 	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.js'></script>
 	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.21.0/mapbox-gl.css' rel='stylesheet'/>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body ng-app="saotaApp" ng-controller="MainCtrl">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<div class="navbar">
+	<div class="navbar" data-role="header" data-position="fixed">
 		<div class="navbar-container clearfix">
 			<div class="navbar-logo-container">
 				<a href="#parallax">
