@@ -29,6 +29,10 @@ div.full-length-container {
 	display: block;
 }
 
+*:focus {
+	outline: none;
+}
+
 /* Clearfix */
 .clearfix:after {
 	visibility: hidden;
@@ -49,6 +53,15 @@ div.full-length-container {
 
 .clearfix {
 	display: block;
+}
+
+/* Disable page loader */
+.ui-loader {
+	display: none !important;
+}
+
+.ui-icon-loading {
+	background: none !important;
 }
 
 /* Navigation bar */

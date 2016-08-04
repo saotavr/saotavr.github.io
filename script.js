@@ -10,6 +10,11 @@ app.config(function($routeProvider) {
 });
 
 app.controller("MainCtrl", function($scope) {
+	var interval = setInterval(function() {
+		$.mobile.loading("hide");
+		clearInterval(interval);
+	}, 1);
+
 	var ParallaxManager, ParallaxPart;
 
 	ParallaxPart = (function() {
