@@ -1,4 +1,4 @@
-var app = angular.module("saotaApp", ["ngRoute", "ngTouch"]);
+var app = angular.module("saotaApp", ["ngRoute"]);
 
 app.config(function($routeProvider) {
 	$routeProvider.when("/", {
