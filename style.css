@@ -251,7 +251,7 @@ div.dropdown-link {
 	top: 0;
 	z-index: 5;
 	background: url("http://i346.photobucket.com/albums/p438/adimitui/Parallax%20001_zpsyayazaqs.png");
-	background-size: 100% auto;
+	background-size: 100vw auto;
 }
 
 .layer-1 {
@@ -1262,6 +1262,12 @@ div.contact-section div.contact-page a:active img {
 }
 
 @media(max-width: 652px) {
+	.layer-3 img {
+		width: 400px;
+		height: auto;
+		margin-top: 30px;
+	}
+
 	div.download-section h1 {
 		font-size: 35px;
 		margin-top: 20px;
@@ -1334,6 +1340,12 @@ div.contact-section div.contact-page a:active img {
 }
 
 @media(max-width: 425px) {
+	.layer-3 img {
+		width: 90%;
+		height: auto;
+		margin-top: 50px;
+	}
+
 	.social-media-icon {
 		height: 35px;
 		width: 35px;
