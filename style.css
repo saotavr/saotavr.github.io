@@ -74,7 +74,7 @@ div.full-length-container {
 div.navbar {
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+	overflow: visible;
 	background-color: #FFF;
 	box-shadow: 2px 1px 1px rgba(0,0,0,0.5);
 	margin-top: -15px;
