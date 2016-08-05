@@ -10,10 +10,6 @@ app.config(function($routeProvider) {
 });
 
 app.controller("MainCtrl", function($scope) {
-	$scope.test = function() {
-		console.log("Touch event firing");
-	};
-
 	var ParallaxManager, ParallaxPart;
 
 	ParallaxPart = (function() {
