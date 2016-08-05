@@ -76,11 +76,20 @@ app.controller("MainCtrl", function($scope) {
 	$scope.showMenu = function() {
 		var dropdownContent = document.getElementById("hamburger-dropdown-content");
 		dropdownContent.classList.toggle("show-hamburger-dropdown");
+		
+		var button = document.querySelectorAll("#hamburger-button")[0];
+		if (dropdownContent.classList.contains("show-hamburger-dropdown")) {
+			button.style.backgroundColor = "#FBB03B";
+		} else {
+			button.style.backgroundColor = "#000";
+		}
 	}
 
 	$scope.hideMenu = function() {
 		var dropdownContent = document.getElementById("hamburger-dropdown-content");
 		dropdownContent.classList.remove("show-hamburger-dropdown");
+		var button = document.querySelectorAll("#hamburger-button")[0];
+		button.style.backgroundColor = "#000";
 	}
 
 	$scope.goToVideo = function() {
