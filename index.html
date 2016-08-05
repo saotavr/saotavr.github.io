@@ -49,12 +49,12 @@
 				</button>
 				<div class="positioner">
 					<div id="hamburger-dropdown-content" class="hamburger-dropdown-content">
-						<div class="dropdown-link" ng-click="goToVideo()">Video</div>
-						<a class="dropdown-link" href="#featured-projects">Featured Projects</a>
-						<a class="dropdown-link" href="#about">About Virtual Reality</a>
-						<a class="dropdown-link" href="#model">3D Modeling Demo</a>
-						<a class="dropdown-link" href="#download">Download App</a>
-						<a class="dropdown-link" href="#contact">Contact Us</a>
+						<div class="dropdown-link" ng-click="goToVideo(); hideMenu()">Video</div>
+						<a class="dropdown-link" href="#featured-projects" ng-click="hideMenu()">Featured Projects</a>
+						<a class="dropdown-link" href="#about" ng-click="hideMenu()">About Virtual Reality</a>
+						<a class="dropdown-link" href="#model" ng-click="hideMenu()">3D Modeling Demo</a>
+						<a class="dropdown-link" href="#download" ng-click="hideMenu()">Download App</a>
+						<a class="dropdown-link" href="#contact" ng-click="hideMenu()">Contact Us</a>
 					</div>
 				</div>
 			</div>

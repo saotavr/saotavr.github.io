@@ -78,6 +78,11 @@ app.controller("MainCtrl", function($scope) {
 		dropdownContent.classList.toggle("show-hamburger-dropdown");
 	}
 
+	$scope.hideMenu = function() {
+		var dropdownContent = document.getElementById("hamburger-dropdown-content");
+		dropdownContent.classList.remove("show-hamburger-dropdown");
+	}
+
 	$scope.goToVideo = function() {
 		angular.element(document).ready(function() {
 			$("html, body").animate({
