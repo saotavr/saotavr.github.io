@@ -99,14 +99,7 @@ app.controller("MainCtrl", function($scope) {
 	var firstPanoramaLightboxTitle = document.querySelectorAll("#first-panorama-lightbox-title")[0];
 
 	window.onclick = function(event) {
-		if (!event.target.matches(".panorama-box")) {
-			var order = ["first", "second", "third", "fourth"];
-			for (var i = 0; i < order.length; i++) {
-				$("#" + order[i] + "-panorama-lightbox").removeClass("hide-lightbox");
-				$("#" + order[i] + "-panorama-lightbox-title").removeClass("hide-lightbox");
-				$("#" + order[i] + "-panorama").removeClass("extension").addClass("default");
-			}
-		}
+		minimizePanorama("all");
 	};
 
 	$(".panorama-box").on("vmousedown", function(event) {
@@ -114,13 +107,26 @@ app.controller("MainCtrl", function($scope) {
 	});
 
 	var revealPanorama = function(eventTarget) {
-		console.log(eventTarget);
 		var order = eventTarget.split("-");
-		console.log(order);
 
 		$("#" + order[0] + "-panorama-lightbox").addClass("hide-lightbox");
 		$("#" + order[0] + "-panorama-lightbox-title").addClass("hide-lightbox");
-		$("#" + order[0] + "-panorama").removeClass("default").addClass("extension");;
+		$("#" + order[0] + "-panorama").removeClass("default").addClass("extension");
+
+		minimizePanorama(order[0]);
+	};
+
+	var minimizePanorama = function(currentOrder) {
+		var order = ["first", "second", "third", "fourth"];
+		for (var i = 0; i < order.length; i++) {
+			if (order[i] === currentOrder) {
+				continue;
+			} else {
+				$("#" + order[i] + "-panorama-lightbox").removeClass("hide-lightbox");
+				$("#" + order[i] + "-panorama-lightbox-title").removeClass("hide-lightbox");
+				$("#" + order[i] + "-panorama").removeClass("extension").addClass("default");
+			}
+		}
 	};
 
 	$scope.previewProject = function(event, imageUrl) {
