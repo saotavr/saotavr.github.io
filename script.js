@@ -86,14 +86,6 @@ app.controller("MainCtrl", function($scope) {
 		});
 	};
 
-	var firstPanoramaLightbox = document.querySelectorAll("#first-panorama-lightbox")[0];
-	var secondPanoramaLightbox = document.querySelectorAll("#second-panorama-lightbox")[0];
-	var thirdPanoramaLightbox = document.querySelectorAll("#third-panorama-lightbox")[0];
-	var fourthPanoramaLightbox = document.querySelectorAll("#fourth-panorama-lightbox")[0];
-
-	var firstPanoramaBox = document.querySelectorAll("#first-panorama")[0];
-	var firstPanoramaLightboxTitle = document.querySelectorAll("#first-panorama-lightbox-title")[0];
-
 	window.onclick = function(event) {
 		minimizePanorama("all");
 	};

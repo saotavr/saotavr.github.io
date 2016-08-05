@@ -10,6 +10,7 @@ body {
 	padding: 0;
 	position: relative;
 	z-index: -1000;
+	overflow-x: hidden;
 }
 
 body.no-scroll {
