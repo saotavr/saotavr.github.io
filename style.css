@@ -266,7 +266,7 @@ div.dropdown-link {
 	top: 65px;
 	z-index: 20;
 	background-image: url("http://i346.photobucket.com/albums/p438/adimitui/Parallax%20003_zpsji0syxp6.png");
-	background-size: 100% 160%;
+	background-size: 100% 150%;
 	margin-top: 230px;
 }
 
@@ -285,7 +285,7 @@ div.dropdown-link {
 	z-index: 30;
 	background-image: url("http://i346.photobucket.com/albums/p438/adimitui/Parallax%20004%20Lengthened_zpsf7obuhna.png");
 	background-repeat: no-repeat;
-	background-size: 100% 700px;
+	background-size: 100% 120%;
 	margin-top: 250px;
 }
 
@@ -1162,6 +1162,11 @@ div.contact-section div.contact-page a:active img {
 }
 
 @media(max-width: 880px) {
+	.layer-4 {
+		background-size: 120% 100%;
+		margin-top: 150px;
+	}
+
 	div.quote-section-width {
 		width: 60%;
 	}
@@ -1263,10 +1268,32 @@ div.contact-section div.contact-page a:active img {
 }
 
 @media(max-width: 652px) {
+	.layer-1 {
+		background-size: 100% 110%;
+		margin-top: 170px;
+	}
+
+	.layer-2 {
+		top: 65px;
+		z-index: 20;
+		background-image: url("http://i346.photobucket.com/albums/p438/adimitui/Parallax%20003_zpsji0syxp6.png");
+		background-size: 100% 150%;
+		margin-top: 190px;
+	}
+
 	.layer-3 img {
 		width: 400px;
 		height: auto;
 		margin-top: 30px;
+	}
+
+	.layer-4 {
+		top: 20px;
+		z-index: 30;
+		background-image: url("http://i346.photobucket.com/albums/p438/adimitui/Parallax%20004%20Lengthened_zpsf7obuhna.png");
+		background-repeat: no-repeat;
+		background-size: 150% 80%;
+		margin-top: 150px;
 	}
 
 	div.download-section h1 {
