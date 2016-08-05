@@ -258,8 +258,8 @@ div.dropdown-link {
 .layer-1 {
 	z-index: 15;
 	background-image: url("http://i346.photobucket.com/albums/p438/adimitui/Parallax%20002_zpsfudkypay.png");
-	background-size: 100% 700px;
-	margin-top: 250px;
+	background-size: 100% 140%;
+	margin-top: 265px;
 }
 
 .layer-2 {
