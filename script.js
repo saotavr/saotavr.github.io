@@ -141,11 +141,16 @@ app.controller("MainCtrl", function($scope) {
 			$scope.previewUrl = imageUrl;
 			$scope.projectPageUrl = "http://www.saota.com/project/" + event.target.id + "/";
 		});
+
+		var body = document.body;
+		body.classList.add("no-scroll");
 	};
 
 	$scope.removePreview = function() {
 		var lightbox = document.querySelectorAll("#background-lightbox")[0];
 		lightbox.classList.remove("show-lightbox");
+		var body = document.body;
+		body.classList.remove("no-scroll");
 	};
 
 	$scope.showInstructions = function() {
