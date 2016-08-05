@@ -251,7 +251,7 @@ div.dropdown-link {
 	top: 0;
 	z-index: 5;
 	background: url("http://i346.photobucket.com/albums/p438/adimitui/Parallax%20001_zpsyayazaqs.png");
-	background-size: 100vw auto;
+	background-size: 100vw 150%;
 }
 
 .layer-1 {
