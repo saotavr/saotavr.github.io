@@ -36,6 +36,22 @@
  *
  * http://api.jqueryui.com/category/ui-core/
  */
+
+  // FIX : prevent auto scroll to top after page load
+
+   $( document ).on( "mobileinit", function() {
+        var silentScroll = $.mobile.silentScroll;
+          $.mobile.silentScroll = function( ypos ) {
+        if ( $.type( ypos ) !== "number" ) {
+            // FIX : prevent auto scroll to top after page load
+            return;
+        } else {
+            silentScroll.apply(this, arguments);
+        }
+    }
+  }
+ // FIX : prevent auto scroll to top after page load
+ 
 (function( $, undefined ) {
 
 var uuid = 0,
