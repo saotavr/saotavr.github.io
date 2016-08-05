@@ -411,13 +411,17 @@ div.panorama-section h1 span {
 }
 
 div.panorama-box {
-	height: 140px;
 	position: relative;
 	border-bottom: 3px solid #FFF;
 }
 
-div.panorama-box.extension {
-	height: 500px !important;
+.panorama-box.default {
+	height: 140px;
+	transition: height 1s;
+}
+
+.panorama-box.extension {
+	height: 500px;
 	transition: height 1s;
 }
 
@@ -444,7 +448,7 @@ div.panorama-lightbox:hover {
 	cursor: pointer;
 }
 
-div.panorama-box h2 {
+h2.panorama-lightbox-title {
 	font-family: "Roboto Condensed";
 	color: #FFF;
 	text-align: center;
@@ -454,7 +458,7 @@ div.panorama-box h2 {
 	display: block;
 }
 
-.panorama-lightbox.hide-lightbox {
+.panorama-lightbox.hide-lightbox, .panorama-lightbox-title.hide-lightbox {
 	display: none;
 }
 

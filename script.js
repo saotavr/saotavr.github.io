@@ -100,48 +100,27 @@ app.controller("MainCtrl", function($scope) {
 
 	window.onclick = function(event) {
 		if (!event.target.matches(".panorama-box")) {
-			firstPanoramaLightbox.classList.remove("hide-lightbox");
-			document.getElementById("first-panorama").style.height = "140px";
-			secondPanoramaLightbox.classList.remove("hide-lightbox");
-			document.getElementById("second-panorama").style.height = "140px";
-			thirdPanoramaLightbox.classList.remove("hide-lightbox");
-			document.getElementById("third-panorama").style.height = "140px";
-			fourthPanoramaLightbox.classList.remove("hide-lightbox");
-			document.getElementById("fourth-panorama").style.height = "140px";
+			var order = ["first", "second", "third", "fourth"];
+			for (var i = 0; i < order.length; i++) {
+				$("#" + order[i] + "-panorama-lightbox").removeClass("hide-lightbox");
+				$("#" + order[i] + "-panorama-lightbox-title").removeClass("hide-lightbox");
+				$("#" + order[i] + "-panorama").removeClass("extension").addClass("default");
+			}
 		}
-	}
-
-	$scope.revealFirstPanorama = function() {
-		angular.element(document).ready(function() {
-			console.log(firstPanoramaLightbox);
-			document.getElementById("first-panorama").style.transition = "height 1s";
-			document.getElementById("first-panorama").style.height = "500px";
-			console.log("Finished");
-		});
 	};
 
-	$scope.revealSecondPanorama = function() {
-		angular.element(document).ready(function() {
-			secondPanoramaLightbox.classList.add("hide-lightbox");
-			document.getElementById("second-panorama").style.transition = "height 1s";
-			document.getElementById("second-panorama").style.height = "500px";
-		});
-	};
+	$(".panorama-box").on("vmousedown", function(event) {
+		revealPanorama(event.target.id);
+	});
 
-	$scope.revealThirdPanorama = function() {
-		angular.element(document).ready(function() {
-			thirdPanoramaLightbox.classList.add("hide-lightbox");
-			document.getElementById("third-panorama").style.transition = "height 1s";
-			document.getElementById("third-panorama").style.height = "500px";
-		});
-	};
+	var revealPanorama = function(eventTarget) {
+		console.log(eventTarget);
+		var order = eventTarget.split("-");
+		console.log(order);
 
-	$scope.revealFourthPanorama = function() {
-		angular.element(document).ready(function() {
-			fourthPanoramaLightbox.classList.add("hide-lightbox");
-			document.getElementById("fourth-panorama").style.transition = "height 1s";
-			document.getElementById("fourth-panorama").style.height = "500px";
-		});
+		$("#" + order[0] + "-panorama-lightbox").addClass("hide-lightbox");
+		$("#" + order[0] + "-panorama-lightbox-title").addClass("hide-lightbox");
+		$("#" + order[0] + "-panorama").removeClass("default").addClass("extension");;
 	};
 
 	$scope.previewProject = function(event, imageUrl) {
