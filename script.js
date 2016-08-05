@@ -102,7 +102,7 @@ app.controller("MainCtrl", function($scope) {
 		minimizePanorama("all");
 	};
 
-	$(".panorama-box").on("vmousedown", function(event) {
+	$(".panorama-box").on("vclick", function(event) {
 		revealPanorama(event.target.id);
 	});
 
