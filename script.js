@@ -178,7 +178,7 @@ app.controller("MainCtrl", function($scope) {
 		} else if ($(window).scrollTop() >= Math.floor($("#download-section").offset().top)) {
 			setActive("download-nav-button");
 		} else if ($(window).scrollTop() >= Math.floor($("#second-quote-section").offset().top)) {
-			setInactive("all"); // All buttons become inactive
+			setInactive("all");
 		} else if ($(window).scrollTop() >= Math.floor($("#model-section").offset().top)) {
 			setActive("model-nav-button");
 		} else if ($(window).scrollTop() >= Math.floor($("#our-virtual-reality-section").offset().top)) {
@@ -214,87 +214,46 @@ app.controller("MainCtrl", function($scope) {
 		});
 	};
 
-	var scrollDown = function() {
-		if ($(window).scrollTop() >= 0 && $(window).scrollTop() < videoLocation) {
+	var scrollDownTo = function(location1, location2) {
+		if ($(window).scrollTop() >= location1 && $(window).scrollTop() < location2) {
 			$("html, body").animate({
-				scrollTop: videoLocation
-			}, "slow");
-		} else if ($(window).scrollTop() >= videoLocation && $(window).scrollTop() < Math.floor($("#first-quote-section").offset().top)) {
-			$("html, body").animate({
-				scrollTop: Math.floor($("#first-quote-section").offset().top)
-			}, "slow");
-		} else if ($(window).scrollTop() >= Math.floor($("#first-quote-section").offset().top) && $(window).scrollTop() < Math.floor($("#panorama-section").offset().top)) {
-			$("html, body").animate({
-				scrollTop: Math.floor($("#panorama-section").offset().top)
-			}, "slow");
-		} else if ($(window).scrollTop() >= Math.floor($("#panorama-section").offset().top) && $(window).scrollTop() < Math.floor($("#our-virtual-reality-section").offset().top)) {
-			$("html, body").animate({
-				scrollTop: Math.floor($("#our-virtual-reality-section").offset().top)
-			}, "slow");
-		} else if ($(window).scrollTop() >= Math.floor($("#our-virtual-reality-section").offset().top) && $(window).scrollTop() < Math.floor($("#model-section").offset().top)) {
-			$("html, body").animate({
-				scrollTop: Math.floor($("#model-section").offset().top)
-			}, "slow");
-		} else if ($(window).scrollTop() >= Math.floor($("#model-section").offset().top) && $(window).scrollTop() < Math.floor($("#second-quote-section").offset().top)) {
-			$("html, body").animate({
-				scrollTop: Math.floor($("#second-quote-section").offset().top)
-			}, "slow");;
-		} else if ($(window).scrollTop() >= Math.floor($("#second-quote-section").offset().top) && $(window).scrollTop() < Math.floor($("#download-section").offset().top)) {
-			$("html, body").animate({
-				scrollTop: Math.floor($("#download-section").offset().top)
-			}, "slow");
-		} else if ($(window).scrollTop() >= Math.floor($("#download-section").offset().top) && $(window).scrollTop() < Math.floor($("#contact-section").offset().top)) {
-			$("html, body").animate({
-				scrollTop: Math.floor($("#contact-section").offset().top)
+				scrollTop: location2
 			}, "slow");
 		}
 	};
 
-	var scrollUp = function() {
-		if ($(window).scrollTop() <= videoLocation && $(window).scrollTop() > Math.floor($("#parallax-section").offset().top)) {
+	var scrollUpTo = function(location1, location2) {
+		if ($(window).scrollTop() <= location1 && $(window).scrollTop() > location2) {
 			$("html, body").animate({
-				scrollTop: Math.floor($("#parallax-section").offset().top)
-			}, "slow");
-		} else if ($(window).scrollTop() <= Math.floor($("#first-quote-section").offset().top) && $(window).scrollTop() > videoLocation) {
-			$("html, body").animate({
-				scrollTop: videoLocation
-			}, "slow");
-		} else if ($(window).scrollTop() <= Math.floor($("#panorama-section").offset().top) && $(window).scrollTop() > Math.floor($("#first-quote-section").offset().top)) {
-			$("html, body").animate({
-				scrollTop: Math.floor($("#first-quote-section").offset().top)
-			}, "slow");
-		} else if ($(window).scrollTop() <= Math.floor($("#our-virtual-reality-section").offset().top) && $(window).scrollTop() > Math.floor($("#panorama-section").offset().top)) {
-			$("html, body").animate({
-				scrollTop: Math.floor($("#panorama-section").offset().top)
-			}, "slow");
-		} else if ($(window).scrollTop() <= Math.floor($("#model-section").offset().top) && $(window).scrollTop() > Math.floor($("#our-virtual-reality-section").offset().top)) {
-			$("html, body").animate({
-				scrollTop: Math.floor($("#our-virtual-reality-section").offset().top)
-			}, "slow");
-		} else if ($(window).scrollTop() <= Math.floor($("#second-quote-section").offset().top) && $(window).scrollTop() > Math.floor($("#model-section").offset().top)) {
-			$("html, body").animate({
-				scrollTop: Math.floor($("#model-section").offset().top)
-			}, "slow");
-		} else if ($(window).scrollTop() <= Math.floor($("#download-section").offset().top) && $(window).scrollTop() > Math.floor($("#second-quote-section").offset().top)) {
-			$("html, body").animate({
-				scrollTop: Math.floor($("#second-quote-section").offset().top)
-			}, "slow");
-		} else if ($(window).scrollTop() <= Math.floor($("#contact-section").offset().top) && $(window).scrollTop() > Math.floor($("#download-section").offset().top)) {
-			$("html, body").animate({
-				scrollTop: Math.floor($("#download-section").offset().top)
-			}, "slow");
-		} else if ($(window).scrollTop() > Math.floor($("#contact-section").offset().top)) {
-			$("html, body").animate({
-				scrollTop: Math.floor($("#contact-section").offset().top)
+				scrollTop: location2
 			}, "slow");
 		}
+	};
+
+	var getFloor = function(sectionID) {
+		return Math.floor($(sectionID).offset().top);
 	};
 
 	$(document).keydown(function(event) {
 		if (event.keyCode === 40) {
-			scrollDown();
+			scrollDownTo(0, videoLocation);
+			scrollDownTo(videoLocation, getFloor("#first-quote-section"));
+			scrollDownTo(getFloor("#first-quote-section"), getFloor("#panorama-section"));
+			scrollDownTo(getFloor("#panorama-section"), getFloor("#our-virtual-reality-section"));
+			scrollDownTo(getFloor("#our-virtual-reality-section"), getFloor("#model-section"));
+			scrollDownTo(getFloor("#model-section"), getFloor("#second-quote-section"));
+			scrollDownTo(getFloor("#second-quote-section"), getFloor("#download-section"));
+			scrollDownTo(getFloor("#download-section"), getFloor("#contact-section"));
 		} else if (event.keyCode === 38) {
-			scrollUp();
+			scrollUpTo(videoLocation, getFloor("#parallax-section"));
+			scrollUpTo(getFloor("#first-quote-section"), videoLocation);
+			scrollUpTo(getFloor("#panorama-section"), getFloor("#first-quote-section"));
+			scrollUpTo(getFloor("#our-virtual-reality-section"), getFloor("#panorama-section"));
+			scrollUpTo(getFloor("#model-section"), getFloor("#our-virtual-reality-section"));
+			scrollUpTo(getFloor("#second-quote-section"), getFloor("#model-section"));
+			scrollUpTo(getFloor("#download-section"), getFloor("#second-quote-section"));
+			scrollUpTo(getFloor("#contact-section"), getFloor("#download-section"));
+			scrollUpTo($(document).height(), getFloor("#contact-section"));
 		}
 	});
 
