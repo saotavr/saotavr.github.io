@@ -76,7 +76,7 @@ app.controller("MainCtrl", function($scope) {
 	$scope.showMenu = function() {
 		var dropdownContent = document.getElementById("hamburger-dropdown-content");
 		dropdownContent.classList.toggle("show-hamburger-dropdown");
-		
+
 		var button = document.querySelectorAll("#hamburger-button")[0];
 		if (dropdownContent.classList.contains("show-hamburger-dropdown")) {
 			button.style.backgroundColor = "#FBB03B";
@@ -219,11 +219,11 @@ app.controller("MainCtrl", function($scope) {
 			$("html, body").animate({
 				scrollTop: videoLocation
 			}, "slow");
-		} else if ($(window).scrollTop() >= videoLocation && $(window).scrollTop() < firstQuoteLocation) {
+		} else if ($(window).scrollTop() >= videoLocation && $(window).scrollTop() < Math.floor($("#first-quote-section").offset().top)) {
 			$("html, body").animate({
-				scrollTop: firstQuoteLocation
+				scrollTop: Math.floor($("#first-quote-section").offset().top)
 			}, "slow");
-		} else if ($(window).scrollTop() >= firstQuoteLocation && $(window).scrollTop() < Math.floor($("#panorama-section").offset().top)) {
+		} else if ($(window).scrollTop() >= Math.floor($("#first-quote-section").offset().top) && $(window).scrollTop() < Math.floor($("#panorama-section").offset().top)) {
 			$("html, body").animate({
 				scrollTop: Math.floor($("#panorama-section").offset().top)
 			}, "slow");
