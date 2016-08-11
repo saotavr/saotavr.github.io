@@ -9,7 +9,7 @@ app.config(function($routeProvider) {
 		templateUrl: "templates/main.html"
 	})
 
-	$routeProvider.when("/project", {
+	$routeProvider.when("/mont-choisy", {
 		controller: "MontChoisyCtrl",
 		templateUrl: "templates/mont-choisy/mont-choisy-index.html"
 	})
