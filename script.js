@@ -1,3 +1,6 @@
+$.mobile.linkBindingEnabled = false;
+$.mobile.hashListeningEnabled = false;
+
 var app = angular.module("saotaApp", ["ngRoute"]);
 
 app.config(function($routeProvider) {
@@ -6,12 +9,10 @@ app.config(function($routeProvider) {
 		templateUrl: "templates/main.html"
 	})
 
-	$routeProvider.when("/mont-choisy", {
+	$routeProvider.when("/project", {
 		controller: "MontChoisyCtrl",
 		templateUrl: "templates/mont-choisy/mont-choisy-index.html"
 	})
-
-	$routeProvider.otherwise("/");
 });
 
 app.controller("MontChoisyCtrl", function($scope) {
@@ -44,7 +45,6 @@ app.controller("MontChoisyCtrl", function($scope) {
 });	
 
 app.controller("MainCtrl", function($scope) {
-	angular.element(document).ready(function() {
 		var ParallaxManager, ParallaxPart;
 
 		ParallaxPart = (function() {
@@ -309,7 +309,6 @@ app.controller("MainCtrl", function($scope) {
 				}
 			});
 		});
-	});
 });
 
 app.controller("MontChoisyCtrl", function($scope) {
