@@ -13,6 +13,8 @@ app.config(function($routeProvider) {
 		controller: "MontChoisyCtrl",
 		templateUrl: "templates/mont-choisy/mont-choisy-index.html"
 	})
+
+	$routeProvider.otherwise("/");
 });
 
 app.controller("MainCtrl", function($scope) {
