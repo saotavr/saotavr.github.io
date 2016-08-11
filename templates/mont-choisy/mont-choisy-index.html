@@ -1,0 +1,26 @@
+<link rel="stylesheet" type="text/css" href="templates/mont-choisy/mont-choisy-style.css"/>
+
+<div class="header" data-role="header" data-position="fixed">
+	<img class="saota-logo" src="templates/mont-choisy/Media/SAOTA VR Logo (Horizontal).png"/>
+</div>
+
+<div class="header-section">
+	<img class="mont-choisy-logo" src="templates/mont-choisy/Media/Mont Choisy Logo (Cropped).jpg"/>
+	<h1>Fairway Grove</h1>
+	<h2>Preview Page</h2>
+</div>
+
+<div class="panorama-section">
+	<div id="first-panorama-container" class="panorama-container first-container" ng-click="revealPanorama('first')">
+		<div id="first-panorama-lightbox" class="panorama-lightbox">
+			<img class="mont-choisy-banner" src="templates/mont-choisy/Media/Mont Choisy Logo (Banner).jpg"/>
+		</div>
+		<iframe width="100%" height="100%" allowfullscreen frameborder="0" src="vrview-master/index.html?image=/templates/mont-choisy/Media/Panorama 2.jpg"></iframe>
+	</div>
+	<div id="second-panorama-container" class="panorama-container" ng-click="revealPanorama('second')">
+		<div id="second-panorama-lightbox" class="panorama-lightbox">
+			<img class="mont-choisy-banner" src="templates/mont-choisy/Media/Mont Choisy Logo (Banner).jpg"/>
+		</div>
+		<iframe width="100%" height="100%" allowfullscreen frameborder="0" src="vrview-master/index.html?image=/templates/mont-choisy/Media/Panorama 3.jpg"></iframe>
+	</div>
+</div>

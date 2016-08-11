@@ -1047,6 +1047,7 @@ div.contact-info {
 	padding-right: 30px;
 	height: 100%;
 	width: 30%;
+	display: block;
 	position: relative;
 	transform: translate(0,-19px);
 }
@@ -1077,6 +1078,7 @@ div.contact-map {
 	float: right;
 	height: 100%;
 	position: relative;
+	display: block;
 }
 
 .app-page-header {
@@ -1105,6 +1107,7 @@ div.contact-section div.contact-page a:active img {
 	position: absolute;
 	top: 0;
 	bottom: 0;
+	height: 100%;
 	width: 100%;
 }
 

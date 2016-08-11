@@ -1,0 +1,133 @@
+/* General Classes */
+* {
+	box-sizing: border-box;
+	font-family: "Quattrocento";
+}
+
+body {
+	background-color: #0D1C2F;
+	margin: 0;
+	padding: 0;
+}
+
+*:focus {
+	outline: none;
+}
+
+/* Header */
+div.header {
+	width: 100%;
+	position: fixed;
+	background-color: #FFF;
+	top: 0;
+	left: 0;
+	right: 0;
+	box-shadow: 2px 1px 1px rgba(0,0,0,0.8);
+	height: 38px;
+}
+
+img.saota-logo {
+	width: 200px;
+	height: auto;
+	margin-left: 10px;
+}
+
+div.header-section {
+	width: 100%;
+	text-align: center;
+	margin: 0px auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+img.mont-choisy-logo {
+	width: 550px;
+	height: auto;
+	margin-top: 20px;
+	border: 3px solid #204572;
+}
+
+h1 {
+	text-transform: uppercase;
+	margin-top: 0px;
+	margin-bottom: -25px;
+	color: #FFF;
+	font-weight: 100;
+}
+
+h2 {
+	text-transform: uppercase;
+	margin-bottom: -30px;
+	color: #204572;
+	font-weight: 700;
+}
+
+/* Panoramas */
+div.panorama-section {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+div.panorama-container {
+	width: 100%;
+	position: relative;
+	height: 150px;
+	transition: all 1s ease;
+	border-bottom: 3px solid #FFF;
+}
+
+.first-container {
+	border-top: 3px solid #FFF;
+}
+
+.panorama-container.extension {
+	height: 500px;
+}
+
+/* Panorama Lightbox */
+div.panorama-lightbox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: fixed;
+}
+
+div.panorama-lightbox:hover {
+	cursor: pointer;
+}
+
+.panorama-lightbox.hide-lightbox {
+	display: none;
+}
+
+img.mont-choisy-banner {
+	height: 100px;
+	width: auto;
+	position: absolute;
+	top: 0;
+	left: 10%;
+	box-shadow: 2px 1px 1px rgba(0,0,0,0.4);
+}
+
+/* Disable Page Loader */
+.ui-loader {
+	display: none !important;
+}
+
+.ui-icon-loading {
+	background: none !important;
+}
+
+.ui-content, .ui-page {
+	padding-top: 0px !important;
+	height: 0px !important;
+}
+
+/* Mobile Optimization */
+@media(max-width: 500px) {
+	img.mont-choisy-logo {
+		width: 80vw;
+	}
+}
