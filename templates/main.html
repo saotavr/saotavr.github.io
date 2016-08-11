@@ -1,0 +1,376 @@
+<div class="navbar" data-role="header" data-position="fixed">
+	<div class="navbar-container clearfix">
+		<div class="navbar-logo-container">
+			<a href="#parallax">
+				<img class="navbar-logo" src="http://i346.photobucket.com/albums/p438/adimitui/SAOTA%20Logo%20Horizontal_zpsf0j32okv.png"/>
+			</a>
+		</div>
+		<div class="navbar-buttons-complete">
+			<ul>
+				<li>
+					<a id="contact-nav-button" href="#contact" class="nav-button">Contact</a>
+				</li>
+				<li>
+					<a id="download-nav-button" href="#download" class="nav-button">App</a>
+				</li>
+				<li>
+					<a id="model-nav-button" href="#model" class="nav-button">3D Modeling</a>
+				</li>
+				<li>
+					<a id="about-nav-button" href="#about" class="nav-button">About VR</a>
+				</li>
+				<li>
+					<a id="featured-projects-nav-button" href="#featured-projects" class="nav-button">Featured Projects</a>
+				</li>
+				<li>
+					<div id="video-nav-button" ng-click="goToVideo()" class="nav-button">Video</div>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-buttons-hamburger">
+			<button id="hamburger-button" ng-click="showMenu()">
+				<img src="http://i346.photobucket.com/albums/p438/adimitui/Hamburger%20Icon%20001%20White_zpsjlbiykt1.png"/>
+			</button>
+			<div class="positioner">
+				<div id="hamburger-dropdown-content" class="hamburger-dropdown-content">
+					<div class="dropdown-link" ng-click="goToVideo(); hideMenu()">Video</div>
+					<a class="dropdown-link" href="#featured-projects" ng-click="hideMenu()">Featured Projects</a>
+					<a class="dropdown-link" href="#about" ng-click="hideMenu()">About Virtual Reality</a>
+					<a class="dropdown-link" href="#model" ng-click="hideMenu()">3D Modeling Demo</a>
+					<a class="dropdown-link" href="#download" ng-click="hideMenu()">Download App</a>
+					<a class="dropdown-link" href="#contact" ng-click="hideMenu()">Contact Us</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="background-lightbox" class="background-lightbox" ng-click="removePreview()">
+	<img src="{{ previewUrl }}"/>
+	<h3>{{ projectName }}</h3>
+	<a href="{{ projectPageUrl }}">
+		<p>Click here to view further project information on the SAOTA website.</p>
+	</a>
+</div>
+
+<div id="background-lightbox-gear-vr" class="background-lightbox-gear-vr">
+	<div class="instruction-box">
+		<div class="instruction-box-header clearfix">
+			<div class="instruction-box-header-divide left">
+				<h3>Gear VR Instructions</h3>
+			</div>
+			<div class="instruction-box-header-divide right">
+				<div class="header-image">
+					<img ng-click="removeInstructions()" src="http://i346.photobucket.com/albums/p438/adimitui/Cancel%20Icon%20White_zps3lbjfcbt.png"/>
+				</div>
+			</div>
+		</div>
+
+		<div class="instruction-box-body">
+			<div class="body-image">
+				<img src="http://i346.photobucket.com/albums/p438/adimitui/SAOTA%20VR%20Transparent_zpsmbfxtihf.png"/>
+			</div>
+			<div class="body-text">
+				<p><span><strong>Instructions for Samsung Gear VR:</strong></span> Open this page on your computer and not your Samsung mobile. The following method applies to owners of a Samsung Gear VR and allows for viewing of select 360 VR Panoramas of SAOTA's architecture.</p>
+				<p><span><strong>Download Files:</strong></span> Please download one/both of the zip files linked below from a computer and copy the contents of the extracted folder to your Samsung device. Additionally, make sure to Download Oculus 360 Photos from the Oculus Store.</p>
+				<a href="http://www.saota.com/saotavr/360Photos.zip">
+					<div class="instruction-download">
+						<img src="http://i346.photobucket.com/albums/p438/adimitui/ZIP%20Icon%20White_zps5itp4ke4.png"/>
+						<h3>Photo Collection 1</h3>
+					</div>
+				</a>
+				<a href="http://www.saota.com/saotavr/360Photos (2).zip">
+					<div class="instruction-download">
+						<img src="http://i346.photobucket.com/albums/p438/adimitui/ZIP%20Icon%20White_zps5itp4ke4.png"/>
+						<h3>Photo Collection 2</h3>
+					</div>
+				</a>
+				<p><span><strong>Step 1:</strong></span> Once you have downloaded the ZIP file, extract its contents.</p>
+				<img class="instruction-photo" src="http://i346.photobucket.com/albums/p438/adimitui/Instruction%20001_zpsikqy3jx4.jpg"/>
+				<p><span><strong>Step 2:</strong></span> You will need to copy the "360Photos" Folder that was extracted from the zip file to the "Oculus" Folder on the Phone’s Storage. This can be by dragging and dropping the folder or through copy and paste. If the Oculus folder does not exist, you must create one.</p>
+				<img class="instruction-photo" src="http://i346.photobucket.com/albums/p438/adimitui/Instruction%20002_zpslzi45cho.jpg"/>
+				<p><span><strong>Step 3:</strong></span> Once you have copied this folder, you can place the phone in the Headset. You need to open the 360Photos app from within Oculus Home and select the menu option "On Device", which will allow you to view images on the device.</p>
+				<img class="oculus-photo" src="http://i346.photobucket.com/albums/p438/adimitui/Instruction%20003_zpszpfzh0uc.jpg"/>
+				<button class="exit-button" ng-click="removeInstructions()">
+					<h3>Exit Instruction Page</h3>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<a name="parallax">
+	<div id="parallax-section" class="parallax-container">
+		<div class="parallax-layer layer-0" data-parallax-speed="0.05" data-max-scroll="565"></div>
+		<div class="parallax-layer layer-1" data-parallax-speed="0.3" data-max-scroll="565"></div>
+		<div class="parallax-layer layer-2" data-parallax-speed="0.7" data-max-scroll="565"></div>
+		<div class="parallax-layer layer-3" data-parallax-speed="-0.5" data-max-scroll="565">
+			<img src="http://i346.photobucket.com/albums/p438/adimitui/SAOTA%20VR%20Logo%20001%20Yellow%20with%20Shadow_zpsfd0h9nfw.png"/>
+		</div>
+		<div class="parallax-layer layer-4" data-parallax-speed="1.0" data-max-scroll="565"></div>
+
+		<div class="parallax-layer layer-5" data-parallax-speed="1.0" data-max-scroll="565">
+			<div id="promo-vid" class="video-section grayscale" ng-click="checkVideoStatus()">
+				<iframe width=100% height=100% src='https://embed.reembed.com/player/1pL7Dw3Njrf11s2Wsv0Q0TAP'></iframe>
+			</div>
+
+			<div id="first-quote-section" class="quote-section first">
+				<div class="quote-section-width">
+					<h2>At last we can experience the power of our spaces as if they were actually built...</h2>
+					<img class="left-quotation-mark" src="http://i346.photobucket.com/albums/p438/adimitui/Quotation%20Mark%20White%20with%20Shadow_zpsmn6f5jdw.png"/>
+					<img class="right-quotation-mark" src="http://i346.photobucket.com/albums/p438/adimitui/Quotation%20Mark%20Right%20White%20with%20Shadow_zpshyshutxc.png"/>
+				</div>
+				<h3>Stefan Antoni, Director</h3>
+			</div>
+
+			<a name="featured-projects">
+				<div id="panorama-section" class="panorama-section">
+					<h1>Featured Projects</h1>
+
+					<div id="first-panorama" class="panorama-box default">
+						<div id="first-panorama-lightbox" class="panorama-lightbox">
+							<h2 id="first-panorama-lightbox-title" class="panorama-lightbox-title">Victoria 21S</h2>
+						</div>
+						<iframe width="100%" height="100%" allowfullscreen frameborder="0" src="vrview-master/index.html?image=/Panorama 1.jpg"></iframe>
+					</div>
+
+					<div id="second-panorama" class="panorama-box default">
+						<div id="second-panorama-lightbox" class="panorama-lightbox">
+							<h2 id="second-panorama-lightbox-title" class="panorama-lightbox-title">Silver Lakes</h2>
+						</div>
+						<iframe width="100%" height="100%" allowfullscreen frameborder="0" src="vrview-master/index.html?image=/Panorama 2.jpg"></iframe>
+					</div>
+
+					<div id="third-panorama" class="panorama-box default">
+						<div id="third-panorama-lightbox" class="panorama-lightbox">
+							<h2 id="third-panorama-lightbox-title" class="panorama-lightbox-title">Bluejay GR</h2>
+						</div>
+						<iframe width="100%" height="100%" allowfullscreen frameborder="0" src="vrview-master/index.html?image=/Panorama 3.jpg"></iframe>
+					</div>
+
+					<div id="fourth-panorama" class="panorama-box default">
+						<div id="fourth-panorama-lightbox" class="panorama-lightbox">
+							<h2 id="fourth-panorama-lightbox-title" class="panorama-lightbox-title">SCTSS</h2>
+						</div>
+						<iframe width="100%" height="100%" allowfullscreen frameborder="0" src="vrview-master/index.html?image=/Panorama 4.jpg"></iframe>
+					</div>
+				</div>
+			</a>
+
+			<a name="about">
+				<div id="our-virtual-reality-section" class="our-virtual-reality-section">
+					<h1>Our (Virtual) Reality</h1>
+
+					<div class="container clearfix">
+						<div class="text-tile">
+							<p>Using SAOTA's virtual reality (VR) system, one can be immersed in virtual space by viewing imagery on a head mounted display (HMD)&mdash;an HD screen attached to clever head-tracking technology or a mobile phone. Virtual reality gives our architects and clients the benefit of a digital representation of a building allowing for quicker collaborative design and iterative critiques. Clients can experience presence in their design at the correct scale and lighting within a resolved digital representation of their project. This allows for better a better understanding of the architecture prior to construction.</p>
+						</div>
+						<div class="photo-tile no-grayscale">
+							<div class="goggle">
+								<img src="http://i346.photobucket.com/albums/p438/adimitui/Goggle%20001%20White_zpsbj5qdoqd.png	"/>
+							</div>
+						</div>
+						<div class="photo-tile clickable" ng-click="previewProject($event, 'http://i346.photobucket.com/albums/p438/adimitui/Tile%20006_zpsi7fsigpw.jpg')">
+							<div id="za-hatfield-109" class="first">
+							</div>
+						</div>
+
+						<div class="photo-tile no-grayscale">
+							<div class="screen">
+								<img src="http://i346.photobucket.com/albums/p438/adimitui/Screen%20Icon%20001_zpsv1lailww.png"/>
+							</div>
+						</div>
+						<div class="photo-tile clickable" ng-click="previewProject($event, 'http://i346.photobucket.com/albums/p438/adimitui/Tile%20001_zpsqtmnkavn.jpg')">
+							<div id="cj-jardin-hotel" class="second">
+							</div>
+						</div>
+						<div class="photo-tile clickable" ng-click="previewProject($event, 'http://i346.photobucket.com/albums/p438/adimitui/Tile%20002_zps152vtxp9.jpg')">
+							<div id="za-ovd-919" class="third">
+							</div>
+						</div>
+						<div class="photo-tile clickable" ng-click="previewProject($event, 'http://i346.photobucket.com/albums/p438/adimitui/Tile%20003_zpshp2qo4mj.jpg')">
+							<div id="za-bantry-view" class="fourth">
+							</div>
+						</div>
+						<div class="photo-tile clickable" ng-click="previewProject($event, 'http://i346.photobucket.com/albums/p438/adimitui/Tile%20004_zpscc8jhkkp.jpg')">
+							<div id="za-norton-dingle" class="fifth">
+							</div>
+						</div>
+
+						<div class="photo-tile clickable" ng-click="previewProject($event, 'http://i346.photobucket.com/albums/p438/adimitui/Tile%20005_zpshxhpnm35.jpg')">
+							<div id="za-beachyhead" class="sixth">
+							</div>
+						</div>
+						<div class="photo-tile clickable" ng-click="previewProject($event, 'http://i346.photobucket.com/albums/p438/adimitui/Tile%20007_zpsaclgjqag.jpg')">
+							<div id="gh-ambassador-ridge" class="seventh">
+							</div>
+						</div>
+						<div class="photo-tile clickable" ng-click="previewProject($event, 'http://i346.photobucket.com/albums/p438/adimitui/Tile%20008_zpsmoprlt1q.jpg')">
+							<div id="ng-idowu-martins" class="eighth">
+							</div>
+						</div>
+						<div class="photo-tile clickable" ng-click="previewProject($event, 'http://i346.photobucket.com/albums/p438/adimitui/Tile%20009_zpstqf1cyen.jpg')">
+							<div  id="us-lax-bellagio" class="ninth">
+							</div>
+						</div>
+						<div class="photo-tile no-grayscale">
+							<div class="design">
+								<img src="http://i346.photobucket.com/albums/p438/adimitui/Design%20Icon%20001_zpsy4edlc8t.png"/>
+							</div>
+						</div>
+
+						<div class="photo-tile clickable" ng-click="previewProject($event, 'http://www.saota.com/wp-content/uploads/2015/05/SAOTA_SN_S2_1.jpg')">
+							<div id="sn-s2" class="tenth">
+							</div>
+						</div>
+						<div class="photo-tile clickable" ng-click="previewProject($event, 'http://www.saota.com/wp-content/uploads/2015/05/SAOTA_SN_Saturne_1.jpg')">
+							<div id="sn-saturne" class="eleventh">
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<a name="model">
+				<div id="model-section" class="model-section">
+					<h1>3d Modeling Demo</h1>
+					<div class="sketchfab-embed-wrapper">
+						<iframe width=100% height=100% src="https://sketchfab.com/models/517504f72eac4f4f927ac8222b57eeae/embed?annotation_cycle=5&amp;autospin=0.2&amp;blending=1&amp;preload=1" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+					</div>
+				</div>
+			</a>
+
+			<div id="second-quote-section" class="full-length-container">
+				<div class="quote-section second">
+					<div class="quote-section-width">
+						<h2>The process of rendering in VR has become as much of a design tool as it is a presentation tool.</h2>
+						<img class="left-quotation-mark" src="http://i346.photobucket.com/albums/p438/adimitui/Quotation%20Mark%20White%20with%20Shadow_zpsmn6f5jdw.png"/>
+						<img class="right-quotation-mark" src="http://i346.photobucket.com/albums/p438/adimitui/Quotation%20Mark%20Right%20White%20with%20Shadow_zpshyshutxc.png"/>
+					</div>
+					<h3>Gerard Slee, VR Specialist</h3>
+				</div>
+			</div>
+
+			<a name="download">
+				<div id="download-section" class="download-section clearfix">
+					<div class="download-box">
+						<img src="http://i346.photobucket.com/albums/p438/adimitui/SAOTA%20Logo%20with%20Glow_zps2aefalqp.png"/>
+						<h1>Mobile Application</h1>
+
+						<div class="full-length-container">
+							<div class="phones">
+								<img src="http://i349.photobucket.com/albums/q369/rfrodriguez/174950006_iphone6plus_silver_portrait_zpsvqsdifpw.png"/>
+							</div>
+							<div class="badges">
+								<a href="https://itunes.apple.com/us/app/saota-vr/id1045921327?mt=8">
+									<img src="http://i346.photobucket.com/albums/p438/adimitui/Apple%20Badge_zps3utsctcj.png"/>
+								</a>
+								<a href="https://play.google.com/store/apps/details?id=com.SAOTA.PicViewer&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+									<img src="http://i346.photobucket.com/albums/p438/adimitui/Google%20Badge_zpsc4gnhncb.png"/>
+								</a>
+								<div class="gear-vr" ng-click="showInstructions()">
+									<img src="http://i346.photobucket.com/albums/p438/adimitui/Gear%20VR%20Badge_zpsgv6fmbw3.png"/>
+								</div>
+							</div>
+							<div class="app-summary">
+								<p>SAOTA VR is an application that allows users to explore SAOTA's architectural designs in virtual reality (VR). The app is FREE and once downloaded can be viewed with or without a Google Cardboard viewer; a Samsung Gear VR version will be available in 2016. At present, SAOTA VR contains six projects with multiple viewpoints digitally rendered in 360 degrees, providing users a window into a world of SAOTA designs.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<a name="contact">
+				<div id="contact-section" class="contact-section">
+					<h1>Contact Page</h1>
+
+					<div class="contact-page clearfix">
+						<div class="contact-map">
+							<div id="map"></div>
+							<script>
+								mapboxgl.accessToken = 'pk.eyJ1IjoiYWRlbGxlc2FvdGEiLCJhIjoiY2lyNjBtanpsMDAwdWlia29hN2o3YWJ0dSJ9.ILWjP6zZfSLM-2gbQBcfWA';
+								var map = new mapboxgl.Map({
+									container: 'map',
+									style: 'mapbox://styles/adellesaota/cir610xvm0007cjm6i3q7vieh',
+									center: [18.41616, -33.931270],
+									zoom: 15
+								});
+
+								map.on('load', function() {
+									map.addSource("points", {
+										"type": "geojson",
+										"data": {
+											"type": "FeatureCollection",
+											"features": [{
+												"type": "Feature",
+												"geometry": {
+													"type": "Point",
+													"coordinates": [18.41616, -33.931270]
+												},
+												"properties": {
+													"title": "SAOTA Office",
+													"icon": "marker"
+												}
+											}]
+										}
+									});
+
+									map.addLayer({
+										"id": "points",
+										"type": "symbol",
+										"source": "points",
+										"layout": {
+											"icon-image": "{icon}-15",
+											"text-field": "{title}",
+											"text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+											"text-offset": [0, 0.6],
+											"text-anchor": "top"
+										}
+									});
+								});
+							</script>
+
+								<!-- <div style="text-decoration:none; overflow:hidden; height:100%	; width:100%; max-width:100%;">
+									<div class="embed-map-display" style="height:100%; width:100%;max-width:100%;">
+										<iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=SAOTA,+Hatfield+Street,+Cape+Town,+Western+Cape,+South+Africa&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>
+									</div>
+									<a class="google-code" href="https://www.hostingreviews.website/compare/dreamhost-vs-bluehost" id="auth-map-data">bluehost vs dreamhost</a>
+									<style>#embed-map-display img{max-width:none!important;background:none!important;}</style>
+								</div>
+								<script src="https://www.hostingreviews.website/google-maps-authorization.js?id=fad392e1-c951-0794-d192-bebb9a13d85a&c=google-code&u=1469523428" defer="defer" async="async"></script> -->
+
+								<div class="contact-info">
+									<h2 class="contact-info-text">Where to Find Us</h2>
+									<p class="contact-info-text">SAOTA VR<br>
+										109 Hatfield Street<br>
+										Gardens, Cape Town<br>
+										8001 South Africa<br>
+										<a href="mailto:info@saota.com" class="emailref">info@saota.com</a>
+									</p>
+									<p class="contact-info-text">+27 21 468 4400</p>
+
+									<div class="full-length-container">
+										<a href="https://www.facebook.com/SAOTA-158867007525510/">
+											<img src="https://dl.dropboxusercontent.com/u/7090379/SAOTA%20VR%20WEBSITE/images/facebook.png?crc=174714959" class="social-media-icon">
+										</a>
+										<a href="https://twitter.com/_SAOTA?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+											<img src="https://dl.dropboxusercontent.com/u/7090379/SAOTA%20VR%20WEBSITE/images/linkedin.png?crc=275803716" class="social-media-icon">
+										</a>
+										<a href="https://www.instagram.com/_saota/">
+											<img src="https://dl.dropboxusercontent.com/u/7090379/SAOTA%20VR%20WEBSITE/images/instagram.png?crc=3839095257" class="social-media-icon">
+										</a>
+										<a href="https://www.linkedin.com/company/saota---stefan-antoni-olmesdahl-truen-architects">
+											<img src="https://dl.dropboxusercontent.com/u/7090379/SAOTA%20VR%20WEBSITE/images/linkedin.png?crc=275803716" class="social-media-icon">
+										</a>
+										<a href="https://za.pinterest.com/saota/">
+											<img src="https://dl.dropboxusercontent.com/u/7090379/SAOTA%20VR%20WEBSITE/images/pinterest-light.png?crc=4182328260" class="social-media-icon">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</a>

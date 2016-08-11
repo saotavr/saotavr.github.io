@@ -3,71 +3,77 @@ var app = angular.module("saotaApp", ["ngRoute"]);
 app.config(function($routeProvider) {
 	$routeProvider.when("/", {
 		controller: "MainCtrl",
-		templateUrl: "index.html"
+		templateUrl: "templates/main.html"
+	})
+
+	$routeProvider.when("/mont-choisy", {
+		controller: "MontChoisyCtrl",
+		templateUrl: "templates/mont-choisy/mont-choisy-index.html"
 	})
 
 	$routeProvider.otherwise("/");
 });
 
-app.controller("MainCtrl", function($scope) {
-	var ParallaxManager, ParallaxPart;
+app.controller("MainCtrl", function($scope, $window) {
+	angular.element(document).ready(function() {
+		var ParallaxManager, ParallaxPart;
 
-	ParallaxPart = (function() {
-		function ParallaxPart(el) {
-			this.el = el;
-			this.speed = parseFloat(this.el.getAttribute('data-parallax-speed'));
-			this.maxScroll = parseInt(this.el.getAttribute('data-max-scroll'));
-		}
-
-		ParallaxPart.prototype.update = function(scrollY) {
-			if (scrollY > this.maxScroll) { return; }
-			var offset = -(scrollY * this.speed);
-			this.setYTransform(offset);
-		};
-
-		ParallaxPart.prototype.setYTransform = function(val) {
-			this.el.style.webkitTransform = "translate3d(0, " + val + "px, 0)";
-			this.el.style.MozTransform    = "translate3d(0, " + val + "px, 0)";
-			this.el.style.OTransform      = "translate3d(0, " + val + "px, 0)";
-			this.el.style.transform       = "translate3d(0, " + val + "px, 0)";
-			this.el.style.msTransform     = "translateY(" + val + "px)";
-		};
-
-		return ParallaxPart;
-	})();
-
-	ParallaxManager = (function() {
-		ParallaxManager.prototype.parts = [];
-
-		function ParallaxManager(elements) {
-			if (Array.isArray(elements) && elements.length) {
-				this.elements = elements;
+		ParallaxPart = (function() {
+			function ParallaxPart(el) {
+				this.el = el;
+				this.speed = parseFloat(this.el.getAttribute('data-parallax-speed'));
+				this.maxScroll = parseInt(this.el.getAttribute('data-max-scroll'));
 			}
-			if (typeof elements === 'object' && elements.item) {
-				this.elements = Array.prototype.slice.call(elements);
-			} else if (typeof elements === 'string') {
-				this.elements = document.querySelectorAll(elements);
-				if (this.elements.length === 0) {
-					throw new Error("Parallax: No elements found");
+
+			ParallaxPart.prototype.update = function(scrollY) {
+				if (scrollY > this.maxScroll) { return; }
+				var offset = -(scrollY * this.speed);
+				this.setYTransform(offset);
+			};
+
+			ParallaxPart.prototype.setYTransform = function(val) {
+				this.el.style.webkitTransform = "translate3d(0, " + val + "px, 0)";
+				this.el.style.MozTransform    = "translate3d(0, " + val + "px, 0)";
+				this.el.style.OTransform      = "translate3d(0, " + val + "px, 0)";
+				this.el.style.transform       = "translate3d(0, " + val + "px, 0)";
+				this.el.style.msTransform     = "translateY(" + val + "px)";
+			};
+
+			return ParallaxPart;
+		})();
+
+		ParallaxManager = (function() {
+			ParallaxManager.prototype.parts = [];
+
+			function ParallaxManager(elements) {
+				if (Array.isArray(elements) && elements.length) {
+					this.elements = elements;
 				}
-				this.elements = Array.prototype.slice.call(this.elements);
-			} else {
-				throw new Error("Parallax: Element variable is not a querySelector string, Array, or NodeList");
+				if (typeof elements === 'object' && elements.item) {
+					this.elements = Array.prototype.slice.call(elements);
+				} else if (typeof elements === 'string') {
+					this.elements = document.querySelectorAll(elements);
+					if (this.elements.length === 0) {
+						throw new Error("Parallax: No elements found");
+					}
+					this.elements = Array.prototype.slice.call(this.elements);
+				} else {
+					throw new Error("Parallax: Element variable is not a querySelector string, Array, or NodeList");
+				}
+				for (var i in this.elements) {
+					this.parts.push(new ParallaxPart(this.elements[i]));
+				}
+				window.addEventListener("scroll", this.onScroll.bind(this));
 			}
-			for (var i in this.elements) {
-				this.parts.push(new ParallaxPart(this.elements[i]));
-			}
-			window.addEventListener("scroll", this.onScroll.bind(this));
-		}
 
-		ParallaxManager.prototype.onScroll = function() {
-			window.requestAnimationFrame(this.scrollHandler.bind(this));
-		};
+			ParallaxManager.prototype.onScroll = function() {
+				window.requestAnimationFrame(this.scrollHandler.bind(this));
+			};
 
-		ParallaxManager.prototype.scrollHandler = function() {
-			var scrollY = Math.max(window.pageYOffset, 0);
-			for (var i in this.parts) { this.parts[i].update(scrollY); }
-		};
+			ParallaxManager.prototype.scrollHandler = function() {
+				var scrollY = Math.max(window.pageYOffset, 0);
+				for (var i in this.parts) { this.parts[i].update(scrollY); }
+			};
 		return ParallaxManager;
 	})();
 
@@ -236,6 +242,7 @@ app.controller("MainCtrl", function($scope) {
 
 	$(document).keydown(function(event) {
 		if (event.keyCode === 40) {
+			console.log(getFloor("#first-quote-section"));
 			scrollDownTo(0, videoLocation);
 			scrollDownTo(videoLocation, getFloor("#first-quote-section"));
 			scrollDownTo(getFloor("#first-quote-section"), getFloor("#panorama-section"));
@@ -272,4 +279,34 @@ app.controller("MainCtrl", function($scope) {
 			}
 		});
 	});
+	});
+});
+
+app.controller("MontChoisyCtrl", function($scope) {
+	$scope.revealPanorama = function(order) {
+		$("#" + order + "-panorama-lightbox").addClass("hide-lightbox");
+		$("#" + order + "-panorama-container").addClass("extension");
+		minimizePanorama(order);
+	};
+
+	window.onclick = function(event) {
+		var className = $(event.target).attr("class");
+		if (className === undefined) {
+			minimizePanorama("all");
+		} else if (!className.includes("panorama")) {
+			minimizePanorama("all");
+		}
+	};
+
+	var minimizePanorama = function(currentOrder) {
+		var order = ["first", "second", "third"];
+		for (var i = 0; i < order.length; i++) {
+			if (order[i] === currentOrder) {
+				continue;
+			} else {
+				$("#" + order[i] + "-panorama-lightbox").removeClass("hide-lightbox");
+				$("#" + order[i] + "-panorama-container").removeClass("extension");
+			}
+		}
+	};
 });
