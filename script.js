@@ -298,26 +298,6 @@ app.controller("MainCtrl", function($scope) {
 		}
 	};
 
-	$(window).vmousedown(function() {
-		var navbarLogo = document.querySelectorAll("#navbar-logo")[0];
-		var navbarButtons = document.querySelectorAll("#navbar-buttons")[0];
-		if ($(window).scrollTop() >= videoLocation) {
-			navbarLogo.classList.add("show-logo");
-			navbarButtons.classList.remove("centered");
-			$("li").css({
-				"float": "right",
-				"display": "block"
-			});
-		} else {
-			navbarLogo.classList.remove("show-logo");
-			navbarButtons.classList.add("centered");
-			$("li").css({
-				"float": "none",
-				"display": "inline-block"
-			});
-		}
-	});
-
 	var setActive = function(name) {
 		angular.element(document).ready(function() {
 			var button = document.getElementById(name);
