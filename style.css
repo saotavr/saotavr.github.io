@@ -128,19 +128,14 @@ div.navbar-buttons-complete.centered {
 	margin: 0px auto;
 }
 
-li.centered {
-	float: none;
-	display: inline-block;
-}
-
 ul {
 	list-style: none;
 }
 
 li {
-	float: right;
+	float: none;
 	list-style: none;
-	display: block;
+	display: inline-block;
 }
 
 .nav-button {

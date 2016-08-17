@@ -284,11 +284,17 @@ app.controller("MainCtrl", function($scope) {
 		if ($(window).scrollTop() >= videoLocation) {
 			navbarLogo.classList.add("show-logo");
 			navbarButtons.classList.remove("centered");
-			$("li").classList.remove("centered");
+			$("li").css({
+				"float": "right",
+				"display": "block"
+			})
 		} else {
 			navbarLogo.classList.remove("show-logo");
 			navbarButtons.classList.add("centered");
-			$("li").classList.add("centered")
+			$("li").css({
+				"float": "none",
+				"display": "inline-block"
+			})
 		}
 	};
 
