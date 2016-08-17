@@ -10,37 +10,37 @@
 		<div class="navbar-buttons-complete">
 			<ul>
 				<li>
-					<a id="contact-nav-button" href="#contact" class="nav-button">Contact</a>
+					<div id="contact-nav-button" ng-click="jumpTo($event)" class="nav-button">Contact</a>
 				</li>
 				<li>
-					<a id="download-nav-button" href="#download" class="nav-button">App</a>
+					<div id="download-nav-button" ng-click="jumpTo($event)" class="nav-button">App</a>
 				</li>
 				<li>
-					<a id="model-nav-button" href="#model" class="nav-button">3D Modeling</a>
+					<div id="model-nav-button" ng-click="jumpTo($event)" class="nav-button">3D Modeling</a>
 				</li>
 				<li>
-					<a id="about-nav-button" href="#about" class="nav-button">About VR</a>
+					<div id="about-nav-button" ng-click="jumpTo($event)" class="nav-button">About VR</a>
 				</li>
 				<li>
-					<a id="featured-projects-nav-button" href="#featured-projects" class="nav-button">Featured Projects</a>
+					<div id="featured-projects-nav-button" ng-click="jumpTo($event)" class="nav-button">Featured Projects</a>
 				</li>
 				<li>
-					<div id="video-nav-button" ng-click="goToVideo()" class="nav-button">Video</div>
+					<div id="video-nav-button" ng-click="jumpTo($event)" class="nav-button">Video</div>
 				</li>
 			</ul>
 		</div>
 		<div class="navbar-buttons-hamburger">
 			<button id="hamburger-button" ng-click="showMenu()">
-				<img src="http://i346.photobucket.com/albums/p438/adimitui/Hamburger%20Icon%20001%20White_zpsjlbiykt1.png"/>
+				<img id="hamburger-icon" src="http://i346.photobucket.com/albums/p438/adimitui/Hamburger%20Icon%20001%20White_zpsjlbiykt1.png"/>
 			</button>
 			<div class="positioner">
 				<div id="hamburger-dropdown-content" class="hamburger-dropdown-content">
-					<div class="dropdown-link" ng-click="goToVideo(); hideMenu()">Video</div>
-					<a class="dropdown-link" href="#featured-projects" ng-click="hideMenu()">Featured Projects</a>
-					<a class="dropdown-link" href="#about" ng-click="hideMenu()">About Virtual Reality</a>
-					<a class="dropdown-link" href="#model" ng-click="hideMenu()">3D Modeling Demo</a>
-					<a class="dropdown-link" href="#download" ng-click="hideMenu()">Download App</a>
-					<a class="dropdown-link" href="#contact" ng-click="hideMenu()">Contact Us</a>
+					<div id="video-nav-button" class="dropdown-link" ng-click="jumpTo($event); hideMenu()">Video</div>
+					<div id="featured-projects-nav-button" class="dropdown-link" ng-click="jumpTo($event); hideMenu()">Featured Projects</div>
+					<div id="about-nav-button" class="dropdown-link" ng-click="jumpTo($event); hideMenu()">About Virtual Reality</div>
+					<div id="model-nav-button" class="dropdown-link" ng-click="jumpTo($event); hideMenu()">3D Modeling Demo</div>
+					<div id="download-nav-button" class="dropdown-link" ng-click="jumpTo($event); hideMenu()">Download App</div>
+					<div id="contact-nav-button" class="dropdown-link" ng-click="jumpTo($event); hideMenu()">Contact Us</div>
 				</div>
 			</div>
 		</div>
@@ -109,12 +109,14 @@
 		<div class="parallax-layer layer-3" data-parallax-speed="-0.5" data-max-scroll="565">
 			<img src="http://i346.photobucket.com/albums/p438/adimitui/SAOTA%20VR%20Logo%20001%20Yellow%20with%20Shadow_zpsfd0h9nfw.png"/>
 		</div>
-		<div class="parallax-layer layer-4" data-parallax-speed="1.0" data-max-scroll="565"></div>
+		<div class="parallax-layer layer-4" data-parallax-speed="1.0" data-max-scroll="565" data-stellar-vertical-offset="400"></div>
 
 		<div class="parallax-layer layer-5" data-parallax-speed="1.0" data-max-scroll="565">
-			<div id="promo-vid" class="video-section grayscale" ng-click="checkVideoStatus()">
-				<iframe width=100% height=100% src='https://embed.reembed.com/player/1pL7Dw3Njrf11s2Wsv0Q0TAP'></iframe>
-			</div>
+			<a name="video">
+				<div id="promo-vid" class="video-section grayscale" ng-click="checkVideoStatus()">
+					<iframe width=100% height=100% src='https://embed.reembed.com/player/1pL7Dw3Njrf11s2Wsv0Q0TAP'></iframe>
+				</div>
+			</a>
 
 			<div id="first-quote-section" class="quote-section first">
 				<div class="quote-section-width">

@@ -90,7 +90,7 @@ app.controller("MainCtrl", function($scope) {
 		if (dropdownContent.classList.contains("show-hamburger-dropdown")) {
 			button.style.backgroundColor = "#FBB03B";
 		} else {
-			button.style.backgroundColor = "#000";
+			button.style.backgroundColor = "#CACACA";
 		}
 	};
 
@@ -98,19 +98,21 @@ app.controller("MainCtrl", function($scope) {
 		var dropdownContent = document.getElementById("hamburger-dropdown-content");
 		dropdownContent.classList.remove("show-hamburger-dropdown");
 		var button = document.querySelectorAll("#hamburger-button")[0];
-		button.style.backgroundColor = "#000";
-	};
-
-	$scope.goToVideo = function() {
-		angular.element(document).ready(function() {
-			$("html, body").animate({
-				scrollTop: 390
-			}, "slow");
-		});
+		button.style.backgroundColor = "#CACACA";
 	};
 
 	window.onclick = function(event) {
 		minimizePanorama("all");
+		console.log(event.target.id);
+		var dropdownContent = document.getElementById("hamburger-dropdown-content");
+		if (dropdownContent.classList.contains("show-hamburger-dropdown")) {
+			var targetID = event.target.id;
+			var button = document.querySelectorAll("#hamburger-button")[0];
+			if (targetID !== "hamburger-button" && targetID !== "hamburger-icon") {
+				dropdownContent.classList.remove("show-hamburger-dropdown");
+				button.style.backgroundColor = "#CACACA";
+			}
+		}
 	};
 
 	$(".panorama-box").on("vmousedown", function(event) {
@@ -178,8 +180,83 @@ app.controller("MainCtrl", function($scope) {
 		body.classList.remove("no-scroll");
 	};
 
-	var videoLocation = 390;
-	var firstQuoteLocation = 960;
+	// Had to hard code these locations in because locations would change due to parallax and would
+	// be a detriment to user experience as the navbar would not scroll to the same location
+	var adjustLocations = function() {
+		var width = $(window).width();
+		parallaxLocation = 0;
+
+		if (width <= 320) {
+			videoLocation = 296;
+			firstQuoteLocation = 448;
+			panoramaLocation = 1033;
+			ourVirtualRealityLocation = 1942;
+			modelLocation = 3356;
+			secondQuoteLocation = 4168;
+			downloadLocation = 4934;
+			contactLocation = 6224;
+		} else if (width <= 425) {
+			videoLocation = 296;
+			firstQuoteLocation = 465;
+			panoramaLocation = 1061;
+			ourVirtualRealityLocation = 1961;
+			modelLocation = 3356;
+			secondQuoteLocation = 4069;
+			downloadLocation = 4754;
+			contactLocation = 6081;
+		} else if (width <= 652) {
+			videoLocation = 296;
+			firstQuoteLocation = 512;
+			panoramaLocation = 1092;
+			ourVirtualRealityLocation = 1936;
+			modelLocation = 3524;
+			secondQuoteLocation = 4111;
+			downloadLocation = 4787;
+			contactLocation = 6357;
+		} else if (width <= 770) {
+			videoLocation = 309;
+			firstQuoteLocation = 552;
+			panoramaLocation = 1168;
+			ourVirtualRealityLocation = 1998;
+			modelLocation = 3763;
+			secondQuoteLocation = 4389;
+			downloadLocation = 5011;
+			contactLocation = 6250;
+		}else if (width <= 880) {
+			videoLocation = 309;
+			firstQuoteLocation = 968;
+			panoramaLocation = 1292;
+			ourVirtualRealityLocation = 2172;
+			modelLocation = 3837;
+			secondQuoteLocation = 4497;
+			downloadLocation = 5183;
+			contactLocation = 6392;
+		} else {
+			videoLocation = 377;
+			firstQuoteLocation = 886;
+			panoramaLocation = 1638;
+			ourVirtualRealityLocation = 2522;
+			modelLocation = 3665;
+			secondQuoteLocation = 4274;
+			downloadLocation = 5009;
+			contactLocation = 6185;
+		}
+	};
+
+	var parallaxLocation;
+	var videoLocation;
+	var firstQuoteLocation;
+	var panoramaLocation;
+	var ourVirtualRealityLocation;
+	var modelLocation;
+	var secondQuoteLocation;
+	var downloadLocation;
+	var contactLocation;
+	adjustLocations();
+
+	$(window).resize(function() {
+		adjustLocations();
+	});
 
 	window.onscroll = function(event) {
 		if ($(window).scrollTop() >= Math.floor($("#contact-section").offset().top)) {
@@ -223,6 +300,36 @@ app.controller("MainCtrl", function($scope) {
 		});
 	};
 
+	$scope.jumpTo = function(event) {
+		console.log(event.target.id);
+		var destination;
+
+		switch(event.target.id) {
+			case "video-nav-button":
+				destination = videoLocation;
+				break;
+			case "featured-projects-nav-button":
+				destination = panoramaLocation;
+				break;
+			case "about-nav-button":
+				destination = ourVirtualRealityLocation;
+				break;
+			case "model-nav-button":
+				destination = modelLocation;
+				break;
+			case "download-nav-button":
+				destination = downloadLocation;
+				break;
+			case "contact-nav-button":
+				destination = contactLocation;
+				break;
+		}
+
+		$("html, body").animate({
+			scrollTop: destination
+		}, "slow");
+	};
+
 	var scrollDownTo = function(location1, location2) {
 		if ($(window).scrollTop() >= location1 && $(window).scrollTop() < location2) {
 			$("html, body").animate({
@@ -245,25 +352,26 @@ app.controller("MainCtrl", function($scope) {
 
 	$(document).keydown(function(event) {
 		if (event.keyCode === 40) {
-			console.log(getFloor("#first-quote-section"));
-			scrollDownTo(0, videoLocation);
-			scrollDownTo(videoLocation, getFloor("#first-quote-section"));
-			scrollDownTo(getFloor("#first-quote-section"), getFloor("#panorama-section"));
-			scrollDownTo(getFloor("#panorama-section"), getFloor("#our-virtual-reality-section"));
-			scrollDownTo(getFloor("#our-virtual-reality-section"), getFloor("#model-section"));
-			scrollDownTo(getFloor("#model-section"), getFloor("#second-quote-section"));
-			scrollDownTo(getFloor("#second-quote-section"), getFloor("#download-section"));
-			scrollDownTo(getFloor("#download-section"), getFloor("#contact-section"));
+			scrollDownTo(parallaxLocation, videoLocation);
+			scrollDownTo(videoLocation, firstQuoteLocation);
+			scrollDownTo(firstQuoteLocation, panoramaLocation);
+			scrollDownTo(panoramaLocation, ourVirtualRealityLocation);
+			scrollDownTo(ourVirtualRealityLocation, modelLocation);
+			scrollDownTo(modelLocation, secondQuoteLocation);
+			scrollDownTo(secondQuoteLocation, downloadLocation);
+			scrollDownTo(downloadLocation, contactLocation);
 		} else if (event.keyCode === 38) {
-			scrollUpTo(videoLocation, getFloor("#parallax-section"));
-			scrollUpTo(getFloor("#first-quote-section"), videoLocation);
-			scrollUpTo(getFloor("#panorama-section"), getFloor("#first-quote-section"));
-			scrollUpTo(getFloor("#our-virtual-reality-section"), getFloor("#panorama-section"));
-			scrollUpTo(getFloor("#model-section"), getFloor("#our-virtual-reality-section"));
-			scrollUpTo(getFloor("#second-quote-section"), getFloor("#model-section"));
-			scrollUpTo(getFloor("#download-section"), getFloor("#second-quote-section"));
-			scrollUpTo(getFloor("#contact-section"), getFloor("#download-section"));
-			scrollUpTo($(document).height(), getFloor("#contact-section"));
+			scrollUpTo(videoLocation, parallaxLocation);
+			scrollUpTo(firstQuoteLocation, videoLocation);
+			scrollUpTo(panoramaLocation, firstQuoteLocation);
+			scrollUpTo(ourVirtualRealityLocation, panoramaLocation);
+			scrollUpTo(modelLocation, ourVirtualRealityLocation);
+			scrollUpTo(secondQuoteLocation, modelLocation);
+			scrollUpTo(downloadLocation, secondQuoteLocation);
+			scrollUpTo(contactLocation, downloadLocation);
+			scrollUpTo($(document).height(), contactLocation);
+		} else if (event.keyCode === 13) {
+			console.log($(window).scrollTop());
 		}
 	});
 
