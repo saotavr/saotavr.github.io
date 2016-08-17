@@ -168,7 +168,7 @@ li {
 
 /* Hamburger Menu */
 div.navbar-buttons-hamburger {
-	float: left;
+	float: right;
 	width: 85%;
 	display: none;
 	text-align: right;
@@ -1161,7 +1161,7 @@ div.contact-section div.contact-page a:active img {
 	}
 
 	div.navbar-container {
-		height: 60px;
+		height: 63px;
 	}
 
 	div.navbar-logo-container {
