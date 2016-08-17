@@ -259,24 +259,36 @@ app.controller("MainCtrl", function($scope) {
 	});
 
 	window.onscroll = function(event) {
-		if ($(window).scrollTop() >= Math.floor($("#contact-section").offset().top)) {
+		if ($(window).scrollTop() >= getFloor("#contact-section")) {
 			setActive("contact-nav-button");
-		} else if ($(window).scrollTop() >= Math.floor($("#download-section").offset().top)) {
+		} else if ($(window).scrollTop() >= getFloor("#download-section")) {
 			setActive("download-nav-button");
-		} else if ($(window).scrollTop() >= Math.floor($("#second-quote-section").offset().top)) {
+		} else if ($(window).scrollTop() >= getFloor("#second-quote-section")) {
 			setInactive("all");
-		} else if ($(window).scrollTop() >= Math.floor($("#model-section").offset().top)) {
+		} else if ($(window).scrollTop() >= getFloor("#model-section")) {
 			setActive("model-nav-button");
-		} else if ($(window).scrollTop() >= Math.floor($("#our-virtual-reality-section").offset().top)) {
+		} else if ($(window).scrollTop() >= getFloor("#our-virtual-reality-section")) {
 			setActive("about-nav-button");
-		} else if ($(window).scrollTop() >= Math.floor($("#panorama-section").offset().top)) {
+		} else if ($(window).scrollTop() >= getFloor("#panorama-section")) {
 			setActive("featured-projects-nav-button");
-		} else if ($(window).scrollTop() >= Math.floor($("#first-quote-section").offset().top)) {
+		} else if ($(window).scrollTop() >= getFloor("#first-quote-section")) {
 			setInactive("all");
 		} else if ($(window).scrollTop() >= videoLocation) {
 			setActive("video-nav-button");
 		} else if ($(window).scrollTop() >= 0) {
 			setInactive("all");
+		}
+
+		var navbarLogo = document.querySelectorAll("#navbar-logo")[0];
+		var navbarButtons = document.querySelectorAll("#navbar-buttons")[0];
+		if ($(window).scrollTop() >= videoLocation) {
+			navbarLogo.classList.add("show-logo");
+			navbarButtons.classList.remove("centered");
+			$("li").classList.remove("centered");
+		} else {
+			navbarLogo.classList.remove("show-logo");
+			navbarButtons.classList.add("centered");
+			$("li").classList.add("centered")
 		}
 	};
 

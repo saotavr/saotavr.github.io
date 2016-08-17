@@ -91,14 +91,21 @@ div.navbar {
 
 div.navbar-container {
 	width: 95%;
+	height: 36px;
 	margin: 0px auto;
 	display: block;
+	position: relative;
 }
 
 div.navbar-logo-container {
 	width: 15%;
 	float: left;
 	text-align: left;
+	display: none;
+}
+
+div.navbar-logo-container.show-logo {
+	display: block;
 }
 
 img.navbar-logo {
@@ -112,11 +119,28 @@ div.navbar-buttons-complete {
 	width: 85%;
 	text-align: right;
 	display: block;
+	height: 51px;
+}
+
+div.navbar-buttons-complete.centered {
+	float: none;
+	text-align: center;
+	margin: 0px auto;
+}
+
+li.centered {
+	float: none;
+	display: inline-block;
+}
+
+ul {
+	list-style: none;
 }
 
 li {
 	float: right;
 	list-style: none;
+	display: block;
 }
 
 .nav-button {
