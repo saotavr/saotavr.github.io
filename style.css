@@ -834,6 +834,12 @@ div.phones img {
 	width: 400px;
 }
 
+div.download-section h4 {
+	margin: 0;
+	color: #FFF;
+	margin-bottom: 10px;
+}
+
 div.badges {
 	width: 100%;
 	margin: 0px auto;
